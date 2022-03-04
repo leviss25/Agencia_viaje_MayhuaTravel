@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300;600;700&display=swap');
+html{
+    font-family: 'Montserrat', Sans-serif;
+    font-size: 62.5%;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-index{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.body-pag{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.linea{
+    background: #FC8C46;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+.content{
+    padding: 1.5rem;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+/*********INCIO HEADER*********/
+/*---background header---*/
+.header__background-img{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url(../images/ciudadela-machu-picchu.jpg);
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    height: 99.3vh;
+    display: flex;
+    flex-direction: column;
+}
+.header__background-otters--img{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url(../images/des-puno.jpg);
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+/*---background navbar---*/
+.nav_logo{
+    width: 100%;
+    min-width: 120px;
+}
+.link-logo{
+    flex-basis: 20%;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+header .navbar{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 0 0;/*0 2rem*/
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-bottom: 1px solid rgb(158, 158, 158);
+}
+.nav__enlaces-menu{
+    flex-basis: 60%;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+.nav__enlaces-menu .nav__enlaces-menu__item{
+    /* padding: 10px 40px; */
+    padding: 1rem 2rem;
+    list-style-type: none;
+    transition: 0.5s;
+}
+.nav__enlaces-menu .nav__enlaces-menu__item .nav__enlaces-menu__item__link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.05em; /*Espaciado de letras*/
+    padding: 1rem 0;
+}
+.nav__enlaces-menu .nav__enlaces-menu__item:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+.nav__ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.nav__ham span{
+    display: block;
+    background-color: #f3f3f3;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+/********* TITULO DE PAGINA**********/
+.content-tittle{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__titulo-index{
+    width: 400px;
+    height: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 5px ;
+}
+.header__titulo{
+    width: 400px;
+    height: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 5px ;
+}
+.titulo-seccion /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+{
+    /* margin-top: 10%; */
+    font-family: "Bebas Neue";
+    font-size: 4.8em;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.titulo__texto{
+    font-size: 2.4em;
+    text-align: center;
+}
+/*********FIN HEADER*********/
+
+/************INICIO MAIN************/
+.seccion1__sub-titulo{
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 3.5em;
+    color: #2C96A9;
+}
+.seccion1__cuerpo__texto{
+    text-align: justify;
+    word-spacing: 2px;
+    white-space:pre-line;
+    display: inline-block;
+    font-size: 1.6em;
+    width: 75%;
+}
+.seccion1__cuerpo__imagen{
+    display: inline-block;
+    width: 20%;
+    align-items: center;
+    padding: 0 25px;
+}
+.seccion1__cuerpo__imagen img{
+    border-radius: 350px;
+    height: 220px;
+    width: 220px;
+}
+
+/*********FRASE VIAJA CON MAYHUA TRAVEL********/
+.seccion1__cuerpo__texto .celeste{
+    font-weight: bold;
+    color: #2C96A9;
+}
+.frase{
+    background-color: #036F82;
+    align-items: center;
+    padding: 0.7%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.icono{
+    display:inline-block;
+    width: 42px;
+}
+.frase__icono{
+    height: 30px;
+}
+.frase__texto{
+    color: white;
+    /* width: 100%; */
+    display: inline-block;
+    text-align: center;
+    padding: 0 23.7%;
+    font-size: 2em;
+}
+
+/***********SECCION DE LOS TOP TOURS********************/
+.toptours{
+    position: relative;
+    padding-bottom: 70px;
+}
+.toptours__titulo{
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 4em;
+    color: #FC8C46;
+}
+.toptours__texto{
+    text-align: center;
+    word-spacing: 2px;
+    font-size: 1.6em;
+}
+.lista-tours{
+    padding: 20px 0;
+}
+.tour{
+    background-color: rgb(247, 247, 247);
+    display: inline-block;
+    width: 350px;
+    margin: 0 15px 15px;
+}
+.tour__titulo{
+    font-family: "Bebas Neue";
+    color: #2C96A9;
+    text-align: center;
+    font-size: 2.5em;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+.tour__intro{
+    padding: 0 20px 10px;
+    word-spacing: 2px;
+    font-size: 1.6em;
+}
+.tour__boton{
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: #FC8C46;
+    text-decoration: none;
+    font-weight: bold;
+}
+.tour__boton__texto{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.6em;
+    padding-top: 7px;
+}
+.boton-mas{
+    display: inline-block;
+    width: 300px;
+    height: 35px;
+    background-color:#2C96A9;
+    border-radius: 20px;
+    text-decoration: none;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.boton-mas__texto{
+    text-align: center;
+    color: white;
+}
+/********************OFERTA DEL MES***********************/
+.oferta{
+    padding-bottom: 50px;
+}
+.oferta__imagen{
+    height: 350px;
+    background-image: url(../images/CAMINO-DE-SALKANTAY2.jpg);
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    position: relative;
+    margin-bottom: 70px;
+}
+.oferta-texto{
+    position: absolute;
+    right: 10%;
+    top: -25px;
+    background-color: #2C96A9;
+    height: 300px;
+    width: 400px;
+    padding: 50px;
+    color: white;
+}
+.oferta__titulo{
+    font-size: 2.4em;
+    padding-bottom: 20px;
+}
+.oferta__intro{
+    font-size: 1.6em;
+    padding: 0 20px 20px;
+}
+.oferta__boton{
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    background-color: #FC8C46;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8em;
+    position: relative;
+    left: 90%;
+    transform: translate(-90%,0);
+}
+.oferta__boton__texto{
+    padding-top: 5px;
+    color: white;
+    text-align: center;
+}
+/************************TIPS***************************/
+.tips__texto{
+    padding-bottom: 40px;
+}
+.tip{
+    border-radius: 50%;
+    display: inline-block;
+    width: 350px;
+    margin: 0 15px;
+    position: relative;
+}
+.tip__intro{
+    font-size: 1.6em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.tip__img{
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/*---------------------PAG Destinos-------------------------*/
+.destino__boton{
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(238, 238, 238);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgb(206, 206, 206);
+    border-left: 0px;
+    border-right: 0px;
+}
+.destino__boton__texto{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding-top: 7px;
+}
+/*---------------------PAG Nosotros-------------------------*/
+/* .nosotros{
+    
+} */
+.mision-vision{
+    height: 355px;
+    padding: 30px 0;
+    position: relative;
+}
+.mision__texto{
+    padding: 40px;
+    width: 650px;
+    display: inline-block;
+    background-color: #2C96A9;
+    color: white;
+    text-align: justify;
+    position: absolute;
+    top: 55px;
+    left: 20px;
+}
+.mision__img{
+    width: 500px;
+    display: inline-block;
+    border: 0.2px solid rgb(236, 236, 236);
+    position: absolute;
+    right: 20px;
+}
+.mision__imagen{
+    width: 500px;
+    height: 350px;
+}
+.vision__texto{
+    padding: 40px;
+    width: 650px;
+    display: inline-block;
+    background-color: #2C96A9;
+    color: white;
+    text-align: justify;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+}
+.vision__img{
+    width: 500px;
+    display: inline-block;
+    border: 0.2px solid rgb(236, 236, 236);
+    position: absolute;
+    left: 20px;
+}
+/*---------------------PAG Galeria-------------------------*/
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+}
+/*---------------------PAG Contacto-------------------------*/
+.seccion-formulario-contacto{
+    padding-bottom: 40px;
+    position: relative;
+}
+.formulario-contacto{
+    display: inline-block;
+    width: 50%;
+    padding: 40px 40px;
+    border: 0.2px solid rgb(216, 216, 216);
+    margin-right: 40px;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+.formulario-titulo{
+    padding: 15px 0;
+    font-size: 1.3rem;
+}
+.etiqueta{
+    font-size: 0.9rem;
+    display: block;
+}
+.campo-texto{
+    display: block;
+}
+.campo{
+    width: 95%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgb(216, 216, 216);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+.campo:hover{
+    background-color: rgba(189, 189, 189, 0.05);
+}
+.campo:focus{
+    background-color: white;
+    border: 2px solid #2C96A9;
+}
+.texto{
+    max-width: 551px;
+    min-height: 70px;
+}
+.btn_enviar{
+    width: 100px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #2C96A9;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: white;
+}
+.btn_enviar:hover{
+    background-color: #036F82;
+}
+.contenido-contacto{
+    display: inline-block;
+    width: 32.5%;
+    height: 540px;
+    border: 0.2px solid rgb(216, 216, 216);
+    position: absolute;
+    top: -1px;
+    padding: 40px;
+}
+.contenido-contacto__titulo{
+    padding: 15px 0;
+    font-size: 1.3rem;
+}
+.contenido-contacto__texto{
+    word-spacing: 2px;
+    padding-bottom: 10px;
+}
+.mapa{
+    border: 0.2px solid rgb(216, 216, 216);
+    padding: 20px;
+    margin-bottom: 50px;
+}
+/************FIN MAIN************/
+
+
+
+/**** INICIO FOOTER****/
+.footer__container{
+    background-color: #2C96A9;
+    color: white;
+    padding: 15px;
+    font-size: 1.4em;
+}
+footer .footer__container .linea{
+    background: #FC8C46;
+    height: 2px;
+    width: 80%;
+    display:inline-block;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.footer__imagen{
+    position: relative;
+    padding-bottom: 20px;
+    background-color: #2C96A9;
+    width: 320px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.footer__imagen__img{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 10px;
+    /* width: 320px; */
+}
+.footer__container__items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__container__items__item__links li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer__derechos-reservados{
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    height: 15px;
+}
+/**** FIN FOOTER****/
+
+/*-----------------RESPONSIVE---------------*/
+@media(max-width:768px){
+    header .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: 20vh;
+        padding: .5rem 0;
+        font-size: 1em;
+    }
+    .nav__enlaces-menu .nav__enlaces-menu__item{
+        padding: 0.5rem 0.6rem;
+    }
+    .link-logo{
+        flex-basis: 30%
+    }
+    /*
+    body{
+        overflow: hidden;
+    }
+    .nav_logo{
+        padding-left: 25px;
+    }
+    .nav__ham{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    header .navbar{
+        background-color: rgba(0, 0, 0, 0.6);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 13px 0;
+    }
+    .nav__enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        opacity: 0.8;
+    }
+    .nav__enlaces-menu .nav__enlaces-menu__item{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    .nav__enlaces-menu.activado{
+        display: flex;
+    }
+    .content-tittle.activado{
+        display: none;
+    }
+    */
+}
