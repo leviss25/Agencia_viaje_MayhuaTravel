@@ -27,7 +27,7 @@ html{
 }
 .content{
     padding: 1.5rem;
-    max-width: 1080px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 /*********INCIO HEADER*********/
@@ -35,7 +35,7 @@ html{
 .header__background-img{
     /* background-image: linear-gradient(rgba(2,7,20,0.5),rgba(0,0,0,0.5)),
     url(../images/ciudadela-machu-picchu.jpg); */
-    background-image: linear-gradient(rgba(2,7,20,0.5),rgba(0,0,0,0.4)),
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
     url(../images/des-puno.jpg);
     background-repeat: no-repeat;
     background-position: none center;
@@ -45,7 +45,7 @@ html{
     flex-direction: column;
 }
 .header__background-otters--img{
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url(../images/des-puno.jpg);
     background-repeat: no-repeat;
     background-position: none center;
@@ -72,7 +72,7 @@ html{
 }
 header .navbar{
     margin: 0 auto;
-    /* width: 90%; */
+    width: 100%;
     max-width: 1080px;
     display: flex;
     align-items: center;
@@ -124,16 +124,17 @@ header .navbar{
 }
 /********* TITULO DE PAGINA**********/
 .content-tittle{
-    height: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .header__titulo-index{
-    width: 400px;
+    width: 100%;
+    max-width: 1080px;
     height: auto;
     color: white;
-    background-color: rgba(0, 0, 0, 0.65);
+    /* background-color: rgba(0, 0, 0, 0.65); */
     padding: 5px ;
 }
 .header__titulo{
@@ -143,31 +144,20 @@ header .navbar{
     /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 5px ;
 }
-.titulo-seccion /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
-{
+.titulo-seccion{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
     /* margin-top: 10%; */
     font-family: "Bebas Neue";
-    font-size: 4.8em;
-    text-align: center;
+    font-size: 8em;
+    /* text-align: center; */
     letter-spacing: 5px;
 }
 .titulo__texto{
-    font-size: 2.4em;
-    text-align: center;
+    font-size: 6em;
+    /* text-align: center; */
 }
 /*********FIN HEADER*********/
 
 /************INICIO MAIN************/
-.main-index{
-    display: grid;
-    grid-template-rows: auto*3;
-}
-.seccion1{
-    display: grid;
-    grid-template-columns:3fr 1fr;
-    grid-template-rows: auto auto;
-
-}
 .seccion1__sub-titulo{
     font-family: "Bebas Neue";
     font-weight: 400;
@@ -176,52 +166,54 @@ header .navbar{
     font-size: 3.5em;
     color: #2C96A9;
 }
+.presentacion{
+    display: flex;
+    justify-content: space-between;
+}
 .seccion1__cuerpo__texto{
     text-align: justify;
     word-spacing: 2px;
     white-space:pre-line;
     display: inline-block;
     font-size: 1.6em;
-    width: 75%;
+    width: 70%;
 }
 .seccion1__cuerpo__imagen{
     display: inline-block;
     width: 20%;
     align-items: center;
-    padding: 0 25px;
+    /* padding: 0 25px; */
 }
 .seccion1__cuerpo__imagen img{
     border-radius: 350px;
-    height: 220px;
-    width: 220px;
+    width: 100%;
 }
-
-/*********FRASE VIAJA CON MAYHUA TRAVEL********/
 .seccion1__cuerpo__texto .celeste{
     font-weight: bold;
     color: #2C96A9;
 }
+/*********FRASE VIAJA CON MAYHUA TRAVEL********/
 .frase{
-    background-color: #036F82;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: #036F82;
     padding: 0.7%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .icono{
     display:inline-block;
-    width: 42px;
+    width: 4%;
 }
 .frase__icono{
-    height: 30px;
+    width: 100%;
 }
 .frase__texto{
     color: white;
-    /* width: 100%; */
     display: inline-block;
-    text-align: center;
-    padding: 0 23.7%;
     font-size: 2em;
+    text-align: center;
 }
 
 /***********SECCION DE LOS TOP TOURS********************/
@@ -617,6 +609,29 @@ footer .footer__container .linea{
     }
     .header__background-img{
         height: 50vh;
+    }
+    .seccion1__cuerpo__imagen{
+        width: 55%;
+    }
+    .titulo-seccion{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+        font-size: 4em;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+    .titulo__texto{
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .icono{
+        display:inline-block;
+        width: 10%;
+        /* height: 3%; */
     }
     /*
     body{
