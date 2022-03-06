@@ -35,7 +35,7 @@ html{
 .header__background-img{
     /* background-image: linear-gradient(rgba(2,7,20,0.5),rgba(0,0,0,0.5)),
     url(../images/ciudadela-machu-picchu.jpg); */
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
     url(../images/des-puno.jpg);
     background-repeat: no-repeat;
     background-position: none center;
@@ -56,12 +56,14 @@ html{
 }
 /*---background navbar---*/
 .contenedor-navbar{
+    position: sticky;
+    top: 0px;
     border-bottom: 1px solid rgb(158, 158, 158);
     display: flex;
     flex-direction: row;
 }
 .nav_logo{
-    width: 100%;
+    width: 85%;
     min-width: 120px;
 }
 .link-logo{
@@ -176,7 +178,7 @@ header .navbar{
     white-space:pre-line;
     display: inline-block;
     font-size: 1.6em;
-    width: 70%;
+    width: 71%;
 }
 .seccion1__cuerpo__imagen{
     display: inline-block;
@@ -198,9 +200,10 @@ header .navbar{
     align-items: center;
     justify-content: space-between;
     background-color: #036F82;
-    padding: 0.7%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    word-spacing: 3px;
 }
 .icono{
     display:inline-block;
@@ -218,16 +221,17 @@ header .navbar{
 
 /***********SECCION DE LOS TOP TOURS********************/
 .toptours{
-    position: relative;
-    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
 }
 .toptours__titulo{
     font-family: "Bebas Neue";
-    font-weight: 400;
+    font-weight: bolder;
     text-align: center;
     padding: 5px 0;
     font-size: 4em;
     color: #FC8C46;
+    word-spacing: 5px;
 }
 .toptours__texto{
     text-align: center;
@@ -236,33 +240,41 @@ header .navbar{
 }
 .lista-tours{
     padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-gap: 25px 45px;
+    overflow: hidden;
 }
 .tour{
     background-color: rgb(247, 247, 247);
-    display: inline-block;
-    width: 350px;
-    margin: 0 15px 15px;
+    width: 100%;
+    /* max-width: 350px; */
+    /* height: 100%; */
+    /* padding: 0 15px; */
+    margin: 0 5px;
+    vertical-align: top;
+    box-shadow: 3px 3px 5px 0.5px rgba(0, 0, 0, 0.5);
+}
+.tour__img{
+    width: 100%;
+    object-fit: cover;
 }
 .tour__titulo{
     font-family: "Bebas Neue";
-    color: #2C96A9;
+    color: #696c6d;
     text-align: center;
     font-size: 2.5em;
     word-spacing: 2px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+.tour__titulo:hover{
+    color: #2C96A9;
 }
 .tour__intro{
     padding: 0 20px 10px;
     word-spacing: 2px;
     font-size: 1.6em;
-}
-.tour__boton{
-    display: block;
-    width: 100%;
-    height: 35px;
-    background-color: #FC8C46;
-    text-decoration: none;
-    font-weight: bold;
 }
 .tour__boton__texto{
     display: inline-block;
@@ -272,23 +284,39 @@ header .navbar{
     font-size: 1.6em;
     padding-top: 7px;
 }
+.tour__boton{
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: #FC8C46;
+    text-decoration: none;
+    font-weight: bold;
+}
+.tour__boton:hover{
+    color: #FC8C46;
+    background-color: white;
+    border: 1px solid #2C96A9;
+}
 .boton-mas{
-    display: inline-block;
-    width: 300px;
+    align-self: center;
+    width: 350px;
     height: 35px;
     background-color:#2C96A9;
-    border-radius: 20px;
+    border-radius: 10px;
     text-decoration: none;
-    align-items: center;
-    font-weight: bold;
     font-size: 1.2em;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.boton-mas:hover{
+    background-color: #036F82;
 }
 .boton-mas__texto{
     text-align: center;
     color: white;
+    font-weight: bolder;
 }
 /********************OFERTA DEL MES***********************/
 .oferta{
@@ -297,20 +325,23 @@ header .navbar{
 .oferta__imagen{
     height: 350px;
     background-image: url(../images/CAMINO-DE-SALKANTAY2.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: none center;
     background-size:cover;
     position: relative;
-    margin-bottom: 70px;
+    margin:40px 0;
+    display: flex;
+    justify-content: end;
 }
 .oferta-texto{
-    position: absolute;
+    /* position: absolute;
     right: 10%;
-    top: -25px;
-    background-color: #2C96A9;
-    height: 300px;
-    width: 400px;
-    padding: 50px;
+    top: -25px; */
+    background-color: rgba(44, 150, 169, 0.85);
+    height: 400px;
+    width: 450px;
+    padding: 40px;
     color: white;
 }
 .oferta__titulo{
@@ -340,6 +371,10 @@ header .navbar{
     text-align: center;
 }
 /************************TIPS***************************/
+.tips{
+    display: flex;
+    flex-direction: column;
+}
 .tips__texto{
     padding-bottom: 40px;
 }
@@ -538,8 +573,6 @@ header .navbar{
 }
 /************FIN MAIN************/
 
-
-
 /**** INICIO FOOTER****/
 .footer__container{
     background-color: #2C96A9;
@@ -610,6 +643,10 @@ footer .footer__container .linea{
     .header__background-img{
         height: 50vh;
     }
+    .seccion1__cuerpo__texto{
+        word-spacing: 2px;
+        width: 90%;
+    }
     .seccion1__cuerpo__imagen{
         width: 55%;
     }
@@ -632,6 +669,14 @@ footer .footer__container .linea{
         display:inline-block;
         width: 10%;
         /* height: 3%; */
+    }
+    .oferta__imagen{
+        justify-content: center;
+    }
+    .oferta-texto{
+        padding: 15px;
+        height: 400px;
+        width: 350px;
     }
     /*
     body{
