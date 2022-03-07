@@ -320,9 +320,6 @@ header .navbar{
     font-weight: bolder;
 }
 /********************OFERTA DEL MES***********************/
-.oferta{
-    /* padding-bottom: 50px; */
-}
 .oferta__imagen{
     height: 350px;
     background-image: url(../images/CAMINO-DE-SALKANTAY2.jpg);
@@ -330,15 +327,21 @@ header .navbar{
     background-repeat: no-repeat;
     background-position: none center;
     background-size:cover;
-    position: relative;
     margin:40px 0;
     display: flex;
     justify-content: end;
+    align-items: center;
+}
+.contenedor-texto-oferta{
+    /* padding: 1.5rem; */
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 100%;
 }
 .oferta-texto{
-    /* position: absolute;
-    right: 10%;
-    top: -25px; */
     background-color: rgba(44, 150, 169, 0.85);
     height: 400px;
     width: 450px;
@@ -687,6 +690,9 @@ footer{
         display:inline-block;
         width: 10%;
         /* height: 3%; */
+    }
+    .contenedor-texto-oferta{
+        flex-basis: auto;
     }
     .oferta__imagen{
         justify-content: center;
