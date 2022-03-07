@@ -59,8 +59,8 @@ html{
     position: sticky;
     top: 0px;
     border-bottom: 1px solid rgb(158, 158, 158);
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
 }
 .nav_logo{
     width: 85%;
@@ -77,6 +77,7 @@ header .navbar{
     width: 100%;
     max-width: 1080px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     min-height: 10vh;
@@ -320,7 +321,7 @@ header .navbar{
 }
 /********************OFERTA DEL MES***********************/
 .oferta{
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }
 .oferta__imagen{
     height: 350px;
@@ -378,30 +379,30 @@ header .navbar{
 .tips__texto{
     padding-bottom: 40px;
 }
+.contenedor-tips{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .tip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 50%;
-    display: inline-block;
-    width: 350px;
-    margin: 0 15px;
-    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
 }
 .tip__intro{
     font-size: 1.6em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     color: white;
     text-transform: uppercase;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.4);
-}
-.tip__img{
-    background-repeat: no-repeat;
-    background-position: none center;
-    background-size:cover;
-    border-radius: 50%;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 /*---------------------PAG Destinos-------------------------*/
 .destino__boton{
@@ -574,43 +575,43 @@ header .navbar{
 /************FIN MAIN************/
 
 /**** INICIO FOOTER****/
-.footer__container{
+footer{
     background-color: #2C96A9;
     color: white;
-    padding: 15px;
     font-size: 1.4em;
 }
-footer .footer__container .linea{
-    background: #FC8C46;
-    height: 2px;
-    width: 80%;
-    display:inline-block;
-    position: relative;
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%,0);
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: start;
+    gap: 1em;
+    flex-wrap: wrap;
 }
-.footer__imagen{
-    position: relative;
-    padding-bottom: 20px;
-    background-color: #2C96A9;
-    width: 320px;
-    left: 50%;
-    transform: translate(-50%,0);
+.footer__logo{
+    grid-column: 1 / 5;
+    grid-row: 1;
 }
-.footer__imagen__img{
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,0);
+.footer__visitanos{
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+.footer__contacto{
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+.footer__interes{
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+.footer__logo__img{
     padding: 10px;
-    /* width: 320px; */
+    width: 90%;
 }
-.footer__container__items{
-    display: flex;
-    justify-content: space-around;
+.footer__container__items__item__links{
+    list-style-type: none;
 }
-
 .footer__container__items__item__links li a{
     text-decoration: none;
     color: white;
@@ -619,7 +620,7 @@ footer .footer__container .linea{
 .footer__derechos-reservados{
     background-color: black;
     color: white;
-    font-size: 1.2em;
+    font-size: 0.9em;
     text-align: center;
     height: 15px;
 }
@@ -628,11 +629,20 @@ footer .footer__container .linea{
 /*-----------------RESPONSIVE---------------*/
 @media(max-width:768px){
     header .navbar{
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         min-height: 15vh;
         padding: .5rem 0;
         font-size: 1em;
+    }
+    .nav_logo{
+        width: 180px;
+        min-width: 120px;
+    }
+    .nav__enlaces-menu{
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .nav__enlaces-menu .nav__enlaces-menu__item{
         padding: 0.5rem 0.6rem;
@@ -677,6 +687,32 @@ footer .footer__container .linea{
         padding: 15px;
         height: 400px;
         width: 350px;
+    }
+    .footer__container{
+        display: grid;
+        /* grid-template-columns: 1fr; */
+        grid-template-rows: auto auto auto auto;
+        /* justify-items: center;
+        align-items: start; */
+        gap: 1em;
+        flex-wrap: wrap;
+        text-align: center;        
+    }
+    .footer__logo{
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+    .footer__visitanos{
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+    .footer__contacto{
+        grid-column: 1 / 5;
+        grid-row: 3;
+    }
+    .footer__interes{
+        grid-column: 1 / 5;
+        grid-row: 4;
     }
     /*
     body{
