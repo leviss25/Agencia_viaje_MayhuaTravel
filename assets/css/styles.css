@@ -81,7 +81,7 @@ header .navbar{
     align-items: center;
     justify-content: space-between;
     min-height: 10vh;
-    padding: 0 0;/*0 2rem*/
+    padding: 0 2rem;/*0 2rem*/
     /* background-color: rgba(0, 0, 0, 0.5); */
     /* border-bottom: 1px solid rgb(158, 158, 158); */
 }
@@ -138,7 +138,7 @@ header .navbar{
     height: auto;
     color: white;
     /* background-color: rgba(0, 0, 0, 0.65); */
-    padding: 5px ;
+    /* padding: 5px ; */
 }
 .header__titulo{
     width: 400px;
@@ -627,6 +627,14 @@ footer{
 /**** FIN FOOTER****/
 
 /*-----------------RESPONSIVE---------------*/
+@media(max-width:1200px){
+    .content{
+        max-width: 900px;
+    }
+    header .navbar{
+        max-width: 900px;
+    }
+}
 @media(max-width:768px){
     header .navbar{
         flex-direction: column;
