@@ -231,5 +231,11 @@
             <p>2022 - MAYHUA TRAVEL - Todos los derechos reservados</p>
         </div>
     </footer>
+    <script type="text/javascript">
+        window.addEventListener("scroll",function(){
+            var headerrr = document.querySelector("contenedor-navbar");
+            headerrr.classList.toggle("abajo", window.scrollY>0);
+        })
+    </script>
 </body>
 </html>

@@ -56,9 +56,11 @@ html{
 }
 /*---background navbar---*/
 .contenedor-navbar{
-    position: sticky;
-    top: 0px;
+    width: 100%;
+    /* position: fixed;
+    top: 0px; */
     border-bottom: 1px solid rgb(158, 158, 158);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     /* display: flex;
     flex-direction: row; */
 }
@@ -367,14 +369,11 @@ header .navbar{
     display: inline-block;
     width: 200px;
     height: 35px;
-    background-color: #FC8C46;
+    background-color: #d36725;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.8em;
-    position: relative;
-    left: 90%;
-    transform: translate(-90%,0);
 }
 .oferta__boton__texto{
     padding-top: 5px;
@@ -516,16 +515,17 @@ header .navbar{
     object-fit: cover;
 }
 /*---------------------PAG Contacto-------------------------*/
-.seccion-formulario-contacto{
-    padding-bottom: 40px;
-    position: relative;
+.seccion-contacto{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    gap: 2.5rem;
 }
 .formulario-contacto{
-    display: inline-block;
-    width: 50%;
-    padding: 40px 40px;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding: 40px;
     border: 0.2px solid rgb(216, 216, 216);
-    margin-right: 40px;
     background-color: rgb(253, 253, 253);
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
 }
@@ -558,10 +558,6 @@ header .navbar{
     background-color: white;
     border: 2px solid #2C96A9;
 }
-.texto{
-    max-width: 551px;
-    min-height: 70px;
-}
 .btn_enviar{
     width: 100px;
     padding: 0.5rem 1rem;
@@ -578,12 +574,9 @@ header .navbar{
     background-color: #036F82;
 }
 .contenido-contacto{
-    display: inline-block;
-    width: 32.5%;
-    height: 540px;
+    grid-column: 2 / 3;
+    grid-row: 1;
     border: 0.2px solid rgb(216, 216, 216);
-    position: absolute;
-    top: -1px;
     padding: 40px;
 }
 .contenido-contacto__titulo{
@@ -596,9 +589,11 @@ header .navbar{
     font-size: 1.44em;
 }
 .mapa{
+    grid-column: 1 / 3;
+    grid-row: 2;
     border: 0.2px solid rgb(216, 216, 216);
     padding: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 /************FIN MAIN************/
 
@@ -660,6 +655,15 @@ footer{
     }
     header .navbar{
         max-width: 900px;
+    }
+    .seccion-contacto{
+        gap: 1rem;
+    }
+    .formulario-contacto{
+        padding: 20px;
+    }
+    .contenido-contacto{
+        padding: 20px;
     }
 }
 @media(max-width:768px){
@@ -779,6 +783,22 @@ footer{
     .vision__img{
         flex-basis: auto;
         width: 90%;
+    }
+    .seccion-contacto{
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+    .formulario-contacto{
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .contenido-contacto{
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+    .mapa{
+        grid-column: 1 / 3;
+        grid-row: 3;
     }
     /*
     body{
