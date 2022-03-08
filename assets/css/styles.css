@@ -141,7 +141,7 @@ header .navbar{
     /* padding: 5px ; */
 }
 .header__titulo{
-    width: 400px;
+    width: 100%;
     height: auto;
     color: white;
     /* background-color: rgba(0, 0, 0, 0.5); */
@@ -152,6 +152,13 @@ header .navbar{
     font-family: "Bebas Neue";
     font-size: 8em;
     /* text-align: center; */
+    letter-spacing: 5px;
+}
+.titulo-seccion-otros{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+    /* margin-top: 10%; */
+    font-family: "Bebas Neue";
+    font-size: 4em;
+    text-align: center;
     letter-spacing: 5px;
 }
 .titulo__texto{
@@ -419,62 +426,78 @@ header .navbar{
     border-left: 0px;
     border-right: 0px;
 }
+.destino__boton:hover{
+    border: 1px solid #2C96A9;
+}
 .destino__boton__texto{
     display: inline-block;
     width: 100%;
     text-align: center;
     color: black;
     padding-top: 7px;
+    font-size: 1.6em;
 }
 /*---------------------PAG Nosotros-------------------------*/
-/* .nosotros{
-    
-} */
-.mision-vision{
-    height: 355px;
-    padding: 30px 0;
-    position: relative;
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
 }
-.mision__texto{
+.familia-mt{
+    grid-row: 1 / 2;
+    padding: 0 1.5em 3em 1.5em;
+}
+.mision-vision{
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+}
+.mision{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+}
+.mision__texto{   
+    display: inline-block; 
     padding: 40px;
-    width: 650px;
-    display: inline-block;
+    /* width: 650px; */
     background-color: #2C96A9;
     color: white;
     text-align: justify;
-    position: absolute;
-    top: 55px;
-    left: 20px;
+    flex-basis: 70%;
 }
 .mision__img{
-    width: 500px;
     display: inline-block;
-    border: 0.2px solid rgb(236, 236, 236);
-    position: absolute;
-    right: 20px;
+    width: 350px;
+    border: 0.2px solid rgb(211, 211, 211);
+    flex-basis: 30%;
 }
 .mision__imagen{
-    width: 500px;
-    height: 350px;
+    width: 100%;
+    /* height: 100%; */
+}
+.vision{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+}
+.vision__img{
+    display: inline-block;
+    /* width: 500px; */
+    border: 0.2px solid rgb(211, 211, 211);
+    flex-basis: 30%;
 }
 .vision__texto{
-    padding: 40px;
-    width: 650px;
     display: inline-block;
+    padding: 40px;
+    /* width: 650px; */
     background-color: #2C96A9;
     color: white;
     text-align: justify;
-    position: absolute;
-    top: 55px;
-    right: 20px;
+    flex-basis: 70%;
 }
-.vision__img{
-    width: 500px;
-    display: inline-block;
-    border: 0.2px solid rgb(236, 236, 236);
-    position: absolute;
-    left: 20px;
-}
+
 /*---------------------PAG Galeria-------------------------*/
 .galeria{
     display: grid;
@@ -508,10 +531,10 @@ header .navbar{
 }
 .formulario-titulo{
     padding: 15px 0;
-    font-size: 1.3rem;
+    font-size: 2.08em;
 }
 .etiqueta{
-    font-size: 0.9rem;
+    font-size: 1.44em;
     display: block;
 }
 .campo-texto{
@@ -523,7 +546,8 @@ header .navbar{
     outline: none;
     border: 2px solid rgb(216, 216, 216);
     border-radius: 5px;
-    font-size: 1rem;
+    font-family: 'Montserrat', Sans-serif;
+    font-size: 1.11em;
     margin-bottom: 22px;
     transition: 0.3s;
 }
@@ -541,7 +565,7 @@ header .navbar{
 .btn_enviar{
     width: 100px;
     padding: 0.5rem 1rem;
-    font-size: 1.1rem;
+    font-size: 1.76em;
     background-color: #2C96A9;
     cursor: pointer;
     outline: none;
@@ -564,11 +588,12 @@ header .navbar{
 }
 .contenido-contacto__titulo{
     padding: 15px 0;
-    font-size: 1.3rem;
+    font-size: 2.08em;
 }
 .contenido-contacto__texto{
     word-spacing: 2px;
     padding-bottom: 10px;
+    font-size: 1.44em;
 }
 .mapa{
     border: 0.2px solid rgb(216, 216, 216);
@@ -619,7 +644,6 @@ footer{
     text-decoration: none;
     color: white;
 }
-
 .footer__derechos-reservados{
     background-color: black;
     color: white;
@@ -727,6 +751,34 @@ footer{
     .footer__interes{
         grid-column: 1 / 5;
         grid-row: 4;
+    }
+    .mision{
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .mision__texto{   
+        flex-basis: auto;
+        width: 90%;
+        padding: 20px;
+    }
+    .mision__img{
+        flex-basis: auto;
+        width: 90%;
+    }
+    .vision{
+        flex-flow: column wrap-reverse;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .vision__texto{  
+        flex-basis: auto; 
+        width: 90%;
+        padding: 20px;
+    }
+    .vision__img{
+        flex-basis: auto;
+        width: 90%;
     }
     /*
     body{
