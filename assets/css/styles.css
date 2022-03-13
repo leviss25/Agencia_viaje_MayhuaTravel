@@ -253,7 +253,7 @@ header .navbar{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     grid-gap: 25px 45px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .tour{
     background-color: rgb(247, 247, 247);
@@ -331,7 +331,7 @@ header .navbar{
 /********************OFERTA DEL MES***********************/
 .oferta__imagen{
     height: 350px;
-    background-image: url(../images/CAMINO-DE-SALKANTAY2.jpg);
+    background-image: url(../images/ciudadela-machu-picchu.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: none center;
