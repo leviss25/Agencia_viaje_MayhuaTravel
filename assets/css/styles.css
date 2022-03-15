@@ -20,7 +20,8 @@ html{
     grid-template-rows: auto 1fr auto;
 }
 .linea{
-    background: #FC8C46;
+    /* background: #FC8C46; */
+    background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
     height: 5px;
     width: 100%;
     display: block;
@@ -209,7 +210,8 @@ header .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #036F82;
+    /* background-color: #036F82; */
+    background-image: radial-gradient(circle, #fc8c46, #b3a234, #6aa85d, #21a38e, #2c96a9);
     padding: 1%;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -256,17 +258,22 @@ header .navbar{
     /* overflow: hidden; */
 }
 .tour{
+    display: block;
     background-color: rgb(247, 247, 247);
-    width: 100%;
+    /* width: 100%; */
     /* max-width: 350px; */
     /* height: 100%; */
     /* padding: 0 15px; */
-    margin: 0 5px;
-    vertical-align: top;
+    /* margin: 0 5px;
+    vertical-align: top; */
+    position: relative;
+    overflow: hidden;
     box-shadow: 3px 3px 5px 0.5px rgba(0, 0, 0, 0.5);
 }
 .tour__img{
     width: 100%;
+    vertical-align: top;
+    height: 300px;
     object-fit: cover;
 }
 .tour__titulo{
@@ -401,10 +408,13 @@ header .navbar{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     width: 300px;
     height: 300px;
     margin: 15px;
+    border-radius: 50%;
+    box-shadow:  11px 11px 22px #9d9d9d,
+             -11px -11px 22px #ffffff;
 }
 .tip__intro{
     font-size: 1.6em;
@@ -507,12 +517,70 @@ header .navbar{
     padding: 40px;
     overflow: hidden;
 }
-
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
 .galeria img{
     width: 100%;
     vertical-align: top;
     height: 300px;
     object-fit: cover;
+    transition: transform 0.5s;
+}
+.galeria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg)
+    scale(1.3);
+}
+.light-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.light-box img{
+    width: 75vw;
+    max-height: 75vh;
+}
+.light-box:target{
+    transform: scale(1);
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #d36725;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2em;
+    /* font-weight: bold; */
+}
+.next{
+    display: block;
+    background: #d36725;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
 }
 /*---------------------PAG Contacto-------------------------*/
 .seccion-contacto{
@@ -599,7 +667,8 @@ header .navbar{
 
 /**** INICIO FOOTER****/
 footer{
-    background-color: #2C96A9;
+    /* background-color: #2C96A9; */
+    background-image: linear-gradient(to top, #fc8c46, #b3a234, #6aa85d, #21a38e, #2c96a9);
     color: white;
     font-size: 1.4em;
 }
@@ -649,7 +718,7 @@ footer{
 /**** FIN FOOTER****/
 
 /*-----------------RESPONSIVE---------------*/
-@media(max-width:1200px){
+@media screen and (max-width:1200px){
     .content{
         max-width: 900px;
     }
@@ -666,7 +735,7 @@ footer{
         padding: 20px;
     }
 }
-@media(max-width:768px){
+@media screen and (max-width:768px){
     header .navbar{
         flex-direction: column;
         flex-wrap: wrap;
@@ -842,4 +911,22 @@ footer{
         display: none;
     }
     */
+}
+@media screen and (max-width:450px){
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+    .lista-tours{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+    .boton-mas{
+        width: 250px;
+    }
+    .oferta-texto{
+        width: 90%;
+    }
 }
