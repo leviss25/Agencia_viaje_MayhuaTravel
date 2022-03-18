@@ -53,14 +53,14 @@ html{
 .carousel-caption p {
 	width: 60%;
 	margin: auto;
-	font-size: 18px;
+	font-size: 2em;
 	line-height: 1.9;
 	font-family: poppins;
 }
 .carousel-caption a {
 	text-transform: uppercase;
 	background: #262626;
-	padding: 10px 30px;
+	padding: 10px 3rem;
 	display: inline-block;
 	color: #fff;
 	margin-top: 15px;
@@ -856,8 +856,8 @@ footer{
     .content{
         max-width: 900px;
     }
-    header .navbar{
-        max-width: 900px;
+    .container-fluid{
+        padding: 0 5rem;
     }
     .seccion-contacto{
         gap: 1rem;
@@ -870,14 +870,14 @@ footer{
     }
 }
 @media screen and (max-width:768px){
-    header .navbar{
+    /* header .navbar{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         min-height: 15vh;
         padding: .5rem 0;
         font-size: 1em;
-    }
+    } */
     .nav_logo{
         width: 180px;
         min-width: 120px;
@@ -1045,6 +1045,10 @@ footer{
         display: none;
     }
     */
+    .carousel-item {
+        height: 50vh;
+        /* min-height: 300px; */
+    }
 }
 @media screen and (max-width:450px){
     .galeria{
@@ -1062,5 +1066,13 @@ footer{
     }
     .oferta-texto{
         width: 90%;
+    }
+
+    .carousel-item {
+        height: 20vh;
+        /* min-height: 300px; */
+    }
+    .container-fluid{
+        padding: 0 2rem;
     }
 }
