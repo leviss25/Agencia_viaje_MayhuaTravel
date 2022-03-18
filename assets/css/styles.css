@@ -210,8 +210,8 @@ header .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: #036F82; */
-    background-image: radial-gradient(circle, #fc8c46, #b3a234, #6aa85d, #21a38e, #2c96a9);
+    background-color: #036F82;
+    /* background-image: radial-gradient(circle, #fc8c46, #b3a234, #6aa85d, #21a38e, #2c96a9); */
     padding: 1%;
     margin-top: 2%;
     margin-bottom: 2%;
