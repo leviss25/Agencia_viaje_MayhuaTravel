@@ -6,43 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería | mayhuatravel.com</title>
     <link rel="shortcut icon" href="../images/Icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><!-- animate__animated  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://kit.fontawesome.com/199e243d2f.js" crossorigin="anonymous"></script>
 </head>
 <body class="body-pag">
     <header>
         <!-- <span class="linea"></span>  -->
         <div class="header__background-otters--img">
             <div class="contenedor-navbar">
-                <nav class="navbar content">
-                    <a class="link-logo" href="../../index.html">
-                        <img class="nav_logo" src="../images/Logo.png">  
-                    </a>
-                    <ul class="nav__enlaces-menu">
-                        <li class="nav__enlaces-menu__item">
-                            <a class="nav__enlaces-menu__item__link" href="../../index.html">Inicio</a>
-                        </li>
-                        <li class="nav__enlaces-menu__item">
-                            <a class="nav__enlaces-menu__item__link" href="../pages/destinos.html">Destinos</a>
-                        </li>
-                        <li class="nav__enlaces-menu__item">
-                            <a class="nav__enlaces-menu__item__link" href="../pages/tours.html">Tours</a>
-                        </li>
-                        <li class="nav__enlaces-menu__item">
-                            <a class="nav__enlaces-menu__item__link" href="../pages/nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav__enlaces-menu__item">
-                            <a class="nav__enlaces-menu__item__link" href="../pages/galeria.html">Galería</a>
-                        </li>
-                        <li class="nav__enlaces-menu__item">
-                            <a class="nav__enlaces-menu__item__link" href="../pages/contact.html">Contacto</a>
-                        </li>
-                    </ul>                    
-                    <button class="nav__ham" type="button">
-                        <span class="br-1"></span>
-                        <span class="br-2"></span>
-                        <span class="br-3"></span>
-                    </button>
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img class="nav_logo" src="../images/Logo.png">
+                      </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/destinos.html">Destinos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/tours.html">Tours</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="../pages/galeria.html">Galería</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/contact.html">Contacto</a>
+                                </li>
+                            </ul>
+                      </div>
+                    </div>
                 </nav>
             </div>
             <div class="content-tittle">
@@ -54,65 +57,75 @@
         <span class="linea"></span>
     </header>
     <main>
-        <div>
-            <h2 class="seccion1__sub-titulo">GALERÍA</h2>
-            <section class="galeria">
-                <a href="#image1">
-                    <img src="../images/CAMINO-DE-SALKANTAY.jpg" alt="">
-                </a>
-                <a href="#image2">
-                    <img src="../images/ciudadela-machu-picchu.jpg" alt="">
-                </a>
-                <a href="#image3">
-                    <img src="../images/CAMINO-DE-SALKANTAY2.jpg" alt="">
-                </a>
-                <a href="#image4">
-                    <img src="../images/mout7colores.jpg" alt="">
-                </a>
-                <a href="#image5">
-                    <img src="../images/des-cusco-mapi.jpg" alt="">
-                </a>
-                <a href="#image6">
-                    <img src="../images/des-lima.webp" alt="">
-                </a>
-            </section>
-            <article class="light-box" id="image1">
-                <a href="#image6" class="next"><i class="fa-solid fa-arrow-left"></i></a>
-                <img src="../images/CAMINO-DE-SALKANTAY.jpg" alt="">
-                <a href="#image2" class="next"><i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="close">X</a>
-            </article>
-            <article class="light-box" id="image2">
-                <a href="#image1" class="next"><i class="fa-solid fa-arrow-left"></i></a>
-                <img src="../images/ciudadela-machu-picchu.jpg" alt="">
-                <a href="#image3" class="next"><i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="close">X</a>
-            </article>
-            <article class="light-box" id="image3">
-                <a href="#image4" class="next"><i class="fa-solid fa-arrow-left"></i></a>
-                <img src="../images/CAMINO-DE-SALKANTAY2.jpg" alt="">
-                <a href="#image2" class="next"><i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="close">X</a>
-            </article>
-            <article class="light-box" id="image4">
-                <a href="#image5" class="next"><i class="fa-solid fa-arrow-left"></i></a>
-                <img src="../images/mout7colores.jpg" alt="">
-                <a href="#image3" class="next"><i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="close">X</a>
-            </article>
-            <article class="light-box" id="image5">
-                <a href="#image6" class="next"><i class="fa-solid fa-arrow-left"></i></a>
-                <img src="../images/des-cusco-mapi.jpg" alt="">
-                <a href="#image4" class="next"><i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="close">X</a>
-            </article>
-            <article class="light-box" id="image6">
-                <a href="#image1" class="next"><i class="fa-solid fa-arrow-left"></i></a>
-                <img src="../images/des-lima.webp" alt="">
-                <a href="#image5" class="next"><i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#" class="close">X</a>
-            </article>
+               
+
+    <div class="container destinosss mdlsss">
+        <h2 class="seccion1__sub-titulo">GALERÍA</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card bg-dark text-white">
+                <img src="../images/CAMINO-DE-SALKANTAY.jpg" class="card-img abc" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card bg-dark text-white">
+                <img src="../images/ciudadela-machu-picchu.jpg" class="card-img abc" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card bg-dark text-white">
+                <img src="../images/CAMINO-DE-SALKANTAY2.jpg" class="card-img abc" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card bg-dark text-white">
+                <img src="../images/mout7colores.jpg" class="card-img abc" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card bg-dark text-white">
+                <img src="../images/des-cusco-mapi.jpg" class="card-img abc" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card bg-dark text-white">
+                <img src="../images/des-lima.webp" class="card-img abc" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+              </div>
+          </div>
         </div>
+    </div>
+    
+        
     </main>
     <footer>
         <span class="linea"></span>
@@ -155,5 +168,17 @@
             <p>2022 - MAYHUA TRAVEL - Todos los derechos reservados</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var nav = document.querySelector('nav');
+  
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 100) {
+            nav.classList.add('bg-dark', 'shadow');
+          } else {
+            nav.classList.remove('bg-dark', 'shadow');
+          }
+        });
+      </script>
 </body>
 </html>
