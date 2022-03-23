@@ -156,6 +156,7 @@ header .navbar{
     font-size: 8em;
     /* text-align: center; */
     letter-spacing: 5px;
+    animation-duration: 2s;
 }
 .titulo-seccion-otros{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
     /* margin-top: 10%; */
@@ -166,6 +167,7 @@ header .navbar{
 }
 .titulo__texto{
     font-size: 6em;
+    animation-duration: 2.5s;
     /* text-align: center; */
 }
 /*********FIN HEADER*********/
@@ -179,7 +181,7 @@ header .navbar{
     font-size: 3.5em;
     color: #2C96A9;
 }
-.presentacion{
+.seccion1__contenedor{
     display: flex;
     justify-content: space-between;
 }
@@ -276,6 +278,13 @@ header .navbar{
     height: 300px;
     object-fit: cover;
 }
+.tour div{
+    overflow: hidden;
+}
+.tour div:hover img{
+    /* filter: blur(1px); */
+    transform: scale(1.2);
+}
 .tour__titulo{
     font-family: "Bebas Neue";
     color: #696c6d;
@@ -310,9 +319,9 @@ header .navbar{
     font-weight: bold;
 }
 .tour__boton:hover{
-    color: #FC8C46;
-    background-color: white;
+    background-color: #2C96A9;
     border: 1px solid #2C96A9;
+    color: #FC8C46;
 }
 .boton-mas{
     align-self: center;
@@ -358,11 +367,12 @@ header .navbar{
     flex-basis: 100%;
 }
 .oferta-texto{
-    background-color: rgba(44, 150, 169, 0.85);
+    background-color: rgba(44, 150, 169, 0.75);
     height: 400px;
     width: 450px;
     padding: 40px;
     color: white;
+    border-radius: 2%;
 }
 .oferta__titulo{
     font-size: 2.4em;
@@ -376,11 +386,14 @@ header .navbar{
     display: inline-block;
     width: 200px;
     height: 35px;
-    background-color: #d36725;
+    background-color: #FC8C46;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.8em;
+}
+.oferta__boton:hover{
+    background-color: orangered;
 }
 .oferta__boton__texto{
     padding-top: 5px;
@@ -597,7 +610,7 @@ header .navbar{
     background-color: rgb(253, 253, 253);
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
 }
-.formulario-titulo{
+.formulario-contacto__titulo{
     padding: 15px 0;
     font-size: 2.08em;
 }
@@ -668,7 +681,7 @@ header .navbar{
 /**** INICIO FOOTER****/
 footer{
     /* background-color: #2C96A9; */
-    background-image: linear-gradient(to top, #fc8c46, #b3a234, #6aa85d, #21a38e, #2c96a9);
+    background-image: linear-gradient(to top, #6aa85d, #4ab39c, #21a38e, #30a9bf, #2c96a9, #036F82);
     color: white;
     font-size: 1.4em;
 }
@@ -777,7 +790,7 @@ footer{
         font-size: 2.5em;
         text-align: center;
     }
-    .presentacion{
+    .seccion1__contenedor{
         flex-direction: column-reverse;
         flex-wrap: wrap;
         align-items: center;
