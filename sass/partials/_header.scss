@@ -1,0 +1,148 @@
+/*********INCIO HEADER*********/
+/*---background header---*/
+.header{
+    &__background-img{
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url(../images/des-puno.jpg);
+        background-repeat: no-repeat;
+        background-position: none center;
+        background-size:cover;
+        height: 99.3vh;
+        display: flex;
+        flex-direction: column;
+    }
+    &__background-otters--img{
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url(../images/des-puno.jpg);
+        background-repeat: no-repeat;
+        background-position: none center;
+        background-size:cover;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+    }
+    &__contenedor-navbar{ /*---background navbar---*/
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        z-index: 1000;
+        .navbar{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1080px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 10vh;
+            padding: 0 2rem;
+        }
+    }
+}
+
+.nav_logo{
+    width: 85%;
+    min-width: 120px;
+}
+.link-logo{
+    flex-basis: 20%;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__enlaces-menu{
+    flex-basis: 50%;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    &__item{
+        /* padding: 10px 40px; */
+        padding: 1rem 2rem;
+        list-style-type: none;
+        transition: 0.5s;
+        &__link{
+            text-decoration: none;
+            color: $blanco;
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: 0.05em; /*Espaciado de letras*/
+            padding: 1rem 0;
+        }
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+        }
+    }
+}
+
+.nav__ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    span{
+        display: block;
+        background-color: $blanco;
+        height: 3px;
+        width: 28px;
+        margin: 10px auto;
+        border-radius: 2px;
+    }
+}
+
+/********* TITULO DE PAGINA**********/
+.content-tittle{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .header__titulo-index{
+        width: 100%;
+        max-width: 1080px;
+        height: auto;
+        color: $blanco;
+        /* background-color: rgba(0, 0, 0, 0.65); */
+        /* padding: 5px ; */
+        .titulo-seccion{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+            /* margin-top: 10%; */
+            font-family: "Bebas Neue";
+            font-size: 8em;
+            /* text-align: center; */
+            letter-spacing: 5px;
+            animation-duration: 2s;
+        }
+        .titulo__texto{
+            font-size: 6em;
+            animation-duration: 2.5s;
+            /* text-align: center; */
+        }
+    }
+    .header__titulo{
+        width: 100%;
+        height: auto;
+        color: $blanco;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        padding: 5px ;
+        .titulo-seccion-otros{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+            /* margin-top: 10%; */
+            font-family: "Bebas Neue";
+            font-size: 4em;
+            text-align: center;
+            letter-spacing: 5px;
+        }
+    }
+}
+.header__contenedor-navbar.abajo{
+    background-color: $negro;
+    .nav_logo{
+        width: 65%;
+    }
+    .navbar{
+        min-height: 8.5vh;
+    }
+}
+/*********FIN HEADER*********/

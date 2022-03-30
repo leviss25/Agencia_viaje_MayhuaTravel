@@ -1,0 +1,24 @@
+/*---------------------PAG Destinos-------------------------*/
+.destino__boton{
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(238, 238, 238);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgb(206, 206, 206);
+    border-left: 0px;
+    border-right: 0px;
+    &__texto{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: $negro;
+        padding-top: 7px;
+        font-size: 1.6em;
+    }
+    &:hover{
+        border: 1px solid $secondary;
+    }
+}
+/*---------------------end PAG Destinos-------------------------*/

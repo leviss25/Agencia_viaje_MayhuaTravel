@@ -1,0 +1,268 @@
+/************INICIO MAIN************/
+.seccion1{
+    &__sub-titulo{
+        font-family: "Bebas Neue";
+        font-weight: 400;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 3.5em;
+        color: $secondary;
+    }
+    &__contenedor{
+        display: flex;
+        justify-content: space-between;
+        .seccion1__cuerpo__texto{
+            text-align: justify;
+            word-spacing: 2px;
+            white-space:pre-line;
+            display: inline-block;
+            font-size: 1.6em;
+            width: 71%;
+            .celeste{
+                font-weight: bold;
+                color: $secondary;
+            }
+        }
+        .seccion1__cuerpo__imagen{
+            display: inline-block;
+            width: 20%;
+            align-items: center;
+            /* padding: 0 25px; */
+            img{
+                border-radius: 350px;
+                width: 100%;
+            }
+        }
+    }
+}
+/*********FRASE VIAJA CON MAYHUA TRAVEL********/
+.frase{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $secondary;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    word-spacing: 3px;
+    .icono{
+        display:inline-block;
+        width: 4%;
+        .frase__icono{
+            width: 100%;
+        }
+    }
+    &__texto{
+        color: $blanco;
+        display: inline-block;
+        font-size: 2em;
+        text-align: center;
+    }
+}
+
+/***********SECCION DE LOS TOP TOURS********************/
+.toptours{
+    display: flex;
+    flex-direction: column;
+    &__titulo{
+        font-family: "Bebas Neue";
+        font-weight: bolder;
+        text-align: center;
+        padding: 5px 0;
+        font-size: 4em;
+        color: $principal;
+        word-spacing: 5px;
+    }
+    &__texto{
+        text-align: center;
+        word-spacing: 2px;
+        font-size: 1.6em;
+    }
+    .lista-tours{
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+        grid-gap: 25px 45px;
+        /* overflow: hidden; */
+        .tour{
+            display: block;
+            background-color: rgb(247, 247, 247);
+            /* width: 100%; */
+            /* max-width: 350px; */
+            /* height: 100%; */
+            /* padding: 0 15px; */
+            /* margin: 0 5px;
+            vertical-align: top; */
+            position: relative;
+            overflow: hidden;
+            box-shadow: 3px 3px 5px 0.5px rgba(0, 0, 0, 0.5);
+            div{
+                overflow: hidden;
+                &:hover img{
+                    /* filter: blur(1px); */
+                    transform: scale(1.2);
+                }
+            }
+            &__img{
+                width: 100%;
+                vertical-align: top;
+                height: 300px;
+                object-fit: cover;
+            }
+            &__titulo{
+                font-family: "Bebas Neue";
+                color: $cTituloTour;
+                text-align: center;
+                font-size: 2.5em;
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                font-weight: lighter;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+            &__intro{
+                padding: 0 20px 10px;
+                word-spacing: 2px;
+                font-size: 1.6em;
+            }
+            &__boton{
+                display: block;
+                width: 100%;
+                height: 35px;
+                background-color: $principal;
+                text-decoration: none;
+                font-weight: bold;
+                &__texto{
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    color: $blanco;
+                    font-size: 1.6em;
+                    padding-top: 7px;
+                }
+                &:hover{
+                    background-color: $blanco;
+                    border: 1px solid $secondary;
+                }
+                &:hover .tour__boton__texto{
+                    color: $negro;
+                }
+            }
+        }
+    }
+    .boton-mas{
+        align-self: center;
+        width: 350px;
+        height: 35px;
+        background-color:$secondary;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        &__texto{
+            text-align: center;
+            color: $blanco;
+            font-weight: bolder;
+        }
+        &:hover{
+            background-color: $efectoSecondary;
+        }
+    }
+}
+/********************OFERTA DEL MES***********************/
+.oferta__imagen{
+    height: 350px;
+    background-image: url(../images/ciudadela-machu-picchu.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    margin:40px 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    .contenedor-texto-oferta{
+        /* padding: 1.5rem; */
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-basis: 100%;
+        .oferta-texto{
+            background-color: rgba(44, 150, 169, 0.75);
+            height: 400px;
+            width: 450px;
+            padding: 40px;
+            color: $blanco;
+            border-radius: 2%;
+            &__titulo{
+                font-size: 2.4em;
+                padding-bottom: 20px;
+            }
+            &__intro{
+                font-size: 1.6em;
+                padding: 0 20px 20px;
+            }
+            &__boton{
+                display: inline-block;
+                width: 200px;
+                height: 35px;
+                background-color: $principal;
+                border-radius: 20px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1.8em;
+                &__texto{
+                    padding-top: 5px;
+                    color: $blanco;
+                    text-align: center;
+                }
+                &:hover{
+                    background-color: $efectoPrincipal;
+                }
+            }
+        }
+    }
+}
+/************************TIPS***************************/
+.tips{
+    display: flex;
+    flex-direction: column;
+    &__texto{
+        padding-bottom: 40px;
+    }
+    .contenedor-tips{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        .tip{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* border-radius: 50%; */
+            width: 300px;
+            height: 300px;
+            margin: 15px;
+            border-radius: 50%;
+            box-shadow: 11px 11px 22px #9d9d9d, -11px -11px 22px #ffffff;
+            &__intro{
+                font-size: 1.6em;
+                color: $blanco;
+                text-transform: uppercase;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
+
+

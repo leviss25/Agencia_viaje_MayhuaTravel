@@ -1,8 +1,7 @@
+/**IMPORT**/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300;600;700&display=swap');
-html{
-    font-family: 'Montserrat', Sans-serif;
-    font-size: 62.5%;
-}
+
+/**NORMALIZE**/
 *,
 *::after,
 *::before{
@@ -10,32 +9,44 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
+/**GLOBALS**/
+html{
+    font-family: 'Montserrat', Sans-serif;
+    font-size: 62.5%;
+}
 
-.body-index{
+/***VARIABLES***/
+:root{
+    --principal: #FC8C46; --efectoPrincipal: #f77626;
+    --secondary: #2C96A9; --efectoSecondary: #036F82;
+    --blanco: #f3f3f3; --negro: #0f0f0f;
+    --cTituloTour:#696c6d;
+}
+/**HELPERS**/
+.content{
+    padding: 1.5rem;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* .body-index{
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 .body-pag{
     display: grid;
     grid-template-rows: auto 1fr auto;
-}
+} */
 .linea{
-    /* background: #FC8C46; */
+    /* background: var(--principal); */
     background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
     height: 5px;
     width: 100%;
     display: block;
 }
-.content{
-    padding: 1.5rem;
-    max-width: 1170px;
-    margin: 0 auto;
-}
+
 /*********INCIO HEADER*********/
 /*---background header---*/
-.header__background-img{
-    /* background-image: linear-gradient(rgba(2,7,20,0.5),rgba(0,0,0,0.5)),
-    url(../images/ciudadela-machu-picchu.jpg); */
+.header .header__background-img{
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url(../images/des-puno.jpg);
     background-repeat: no-repeat;
@@ -45,7 +56,7 @@ html{
     display: flex;
     flex-direction: column;
 }
-.header__background-otters--img{
+.header .header__background-otters--img{
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url(../images/des-puno.jpg);
     background-repeat: no-repeat;
@@ -56,7 +67,7 @@ html{
     flex-direction: column;
 }
 /*---background navbar---*/
-.contenedor-navbar{
+.header .header__contenedor-navbar{
     width: 100%;
     position: fixed;
     top: 0px;
@@ -66,30 +77,7 @@ html{
     flex-direction: row; */
     z-index: 1000;
 }
-.contenedor-navbar.abajo{
-    /* background-color: white; */
-    background-color: black;
-}
-/* .contenedor-navbar.abajo .nav__enlaces-menu .nav__enlaces-menu__item .nav__enlaces-menu__item__link{
-    color: black;
-} */
-.contenedor-navbar.abajo .nav_logo{
-    width: 65%;
-}
-.contenedor-navbar.abajo .navbar{
-    min-height: 8.5vh;
-}
-.nav_logo{
-    width: 85%;
-    min-width: 120px;
-}
-.link-logo{
-    flex-basis: 20%;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-}
-header .navbar{
+.header .header__contenedor-navbar .navbar{
     margin: 0 auto;
     width: 100%;
     max-width: 1080px;
@@ -102,6 +90,18 @@ header .navbar{
     /* background-color: rgba(0, 0, 0, 0.5); */
     /* border-bottom: 1px solid rgb(158, 158, 158); */
 }
+
+.nav_logo{
+    width: 85%;
+    min-width: 120px;
+}
+.link-logo{
+    flex-basis: 20%;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
 .nav__enlaces-menu{
     flex-basis: 50%;
     display: flex;
@@ -116,7 +116,7 @@ header .navbar{
 }
 .nav__enlaces-menu .nav__enlaces-menu__item .nav__enlaces-menu__item__link{
     text-decoration: none;
-    color: white;
+    color: var(--blanco);
     font-size: 1.5em;
     font-weight: 600;
     letter-spacing: 0.05em; /*Espaciado de letras*/
@@ -136,7 +136,7 @@ header .navbar{
 }
 .nav__ham span{
     display: block;
-    background-color: #f3f3f3;
+    background-color: var(--blanco);
     height: 3px;
     width: 28px;
     margin: 10px auto;
@@ -153,14 +153,14 @@ header .navbar{
     width: 100%;
     max-width: 1080px;
     height: auto;
-    color: white;
+    color: var(--blanco);
     /* background-color: rgba(0, 0, 0, 0.65); */
     /* padding: 5px ; */
 }
 .header__titulo{
     width: 100%;
     height: auto;
-    color: white;
+    color: var(--blanco);
     /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 5px ;
 }
@@ -184,6 +184,17 @@ header .navbar{
     animation-duration: 2.5s;
     /* text-align: center; */
 }
+
+.header__contenedor-navbar.abajo{
+    /* background-color: var(--blanco); */
+    background-color: var(--negro);
+}
+.header__contenedor-navbar.abajo .nav_logo{
+    width: 65%;
+}
+.header__contenedor-navbar.abajo .navbar{
+    min-height: 8.5vh;
+}
 /*********FIN HEADER*********/
 
 /************INICIO MAIN************/
@@ -193,7 +204,7 @@ header .navbar{
     text-align: center;
     padding: 20px 0;
     font-size: 3.5em;
-    color: #2C96A9;
+    color: var(--secondary);
 }
 .seccion1__contenedor{
     display: flex;
@@ -219,15 +230,14 @@ header .navbar{
 }
 .seccion1__cuerpo__texto .celeste{
     font-weight: bold;
-    color: #2C96A9;
+    color: var(--secondary);
 }
 /*********FRASE VIAJA CON MAYHUA TRAVEL********/
 .frase{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2C96A9;
-    /* background-image: radial-gradient(circle, #fc8c46, #b3a234, #6aa85d, #21a38e, #2c96a9); */
+    background-color: var(--secondary);
     padding: 1%;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -241,7 +251,7 @@ header .navbar{
     width: 100%;
 }
 .frase__texto{
-    color: white;
+    color: var(--blanco);
     display: inline-block;
     font-size: 2em;
     text-align: center;
@@ -258,7 +268,7 @@ header .navbar{
     text-align: center;
     padding: 5px 0;
     font-size: 4em;
-    color: #FC8C46;
+    color: var(--principal);
     word-spacing: 5px;
 }
 .toptours__texto{
@@ -301,7 +311,7 @@ header .navbar{
 }
 .tour__titulo{
     font-family: "Bebas Neue";
-    color: #696c6d;
+    color: var(--cTituloTour);
     text-align: center;
     font-size: 2.5em;
     word-spacing: 2px;
@@ -309,7 +319,7 @@ header .navbar{
     font-weight: lighter;
 }
 .tour__titulo:hover{
-    color: #2C96A9;
+    color: var(--secondary);
 }
 .tour__intro{
     padding: 0 20px 10px;
@@ -320,7 +330,7 @@ header .navbar{
     display: inline-block;
     width: 100%;
     text-align: center;
-    color: white;
+    color: var(--blanco);
     font-size: 1.6em;
     padding-top: 7px;
 }
@@ -328,20 +338,20 @@ header .navbar{
     display: block;
     width: 100%;
     height: 35px;
-    background-color: #FC8C46;
+    background-color: var(--principal);
     text-decoration: none;
     font-weight: bold;
 }
 .tour__boton:hover{
-    background-color: #2C96A9;
-    border: 1px solid #2C96A9;
-    color: #FC8C46;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--principal);
 }
 .boton-mas{
     align-self: center;
     width: 350px;
     height: 35px;
-    background-color:#2C96A9;
+    background-color:var(--secondary);
     border-radius: 10px;
     text-decoration: none;
     font-size: 1.2em;
@@ -351,14 +361,15 @@ header .navbar{
     margin: 30px;
 }
 .boton-mas:hover{
-    background-color: #036F82;
+    background-color: --efectoSecondary;
 }
 .boton-mas__texto{
     text-align: center;
-    color: white;
+    color: var(--blanco);
     font-weight: bolder;
 }
 /********************OFERTA DEL MES***********************/
+
 .oferta__imagen{
     height: 350px;
     background-image: url(../images/ciudadela-machu-picchu.jpg);
@@ -385,33 +396,33 @@ header .navbar{
     height: 400px;
     width: 450px;
     padding: 40px;
-    color: white;
+    color: var(--blanco);
     border-radius: 2%;
 }
-.oferta__titulo{
+.oferta-texto__titulo{
     font-size: 2.4em;
     padding-bottom: 20px;
 }
-.oferta__intro{
+.oferta-texto__intro{
     font-size: 1.6em;
     padding: 0 20px 20px;
 }
-.oferta__boton{
+.oferta-texto__boton{
     display: inline-block;
     width: 200px;
     height: 35px;
-    background-color: #FC8C46;
+    background-color: var(--principal);
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.8em;
 }
-.oferta__boton:hover{
-    background-color: orangered;
+.oferta-texto__boton:hover{
+    background-color: var(--efectoPrincipal);
 }
-.oferta__boton__texto{
+.oferta-texto__boton__texto{
     padding-top: 5px;
-    color: white;
+    color: var(--blanco);
     text-align: center;
 }
 /************************TIPS***************************/
@@ -445,7 +456,7 @@ header .navbar{
 }
 .tip__intro{
     font-size: 1.6em;
-    color: white;
+    color: var(--blanco);
     text-transform: uppercase;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.4);
@@ -463,13 +474,13 @@ header .navbar{
     border-right: 0px;
 }
 .destino__boton:hover{
-    border: 1px solid #2C96A9;
+    border: 1px solid var(--secondary);
 }
 .destino__boton__texto{
     display: inline-block;
     width: 100%;
     text-align: center;
-    color: black;
+    color: var(--negro);
     padding-top: 7px;
     font-size: 1.6em;
 }
@@ -497,8 +508,8 @@ header .navbar{
     display: inline-block; 
     padding: 40px;
     /* width: 650px; */
-    background-color: #2C96A9;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--blanco);
     text-align: justify;
     flex-basis: 70%;
 }
@@ -528,8 +539,8 @@ header .navbar{
     display: inline-block;
     padding: 40px;
     /* width: 650px; */
-    background-color: #2C96A9;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--blanco);
     text-align: justify;
     flex-basis: 70%;
 }
@@ -588,8 +599,8 @@ header .navbar{
     position: absolute;
     top: 40px;
     right: 40px;
-    background: #FC8C46;
-    color: #fff;
+    background: var(--principal);
+    color: var(--blanco);
     text-decoration: none;
     width: 40px;
     height: 40px;
@@ -601,8 +612,8 @@ header .navbar{
 }
 .next{
     display: block;
-    background: #FC8C46;
-    color: #fff;
+    background: var(--principal);
+    color: var(--blanco);
     height: 30px;
     width: 30px;
     line-height: 30px;
@@ -650,23 +661,23 @@ header .navbar{
     background-color: rgba(189, 189, 189, 0.05);
 }
 .campo:focus{
-    background-color: white;
-    border: 2px solid #2C96A9;
+    background-color: var(--blanco);
+    border: 2px solid var(--secondary);
 }
 .btn_enviar{
     width: 100px;
     padding: 0.5rem 1rem;
     font-size: 1.76em;
-    background-color: #2C96A9;
+    background-color: var(--secondary);
     cursor: pointer;
     outline: none;
     border: none;
     border-radius: 5px;
     transition: 0.3s;
-    color: white;
+    color: var(--blanco);
 }
 .btn_enviar:hover{
-    background-color: #036F82;
+    background-color: --efectoSecondary;
 }
 .contenido-contacto{
     grid-column: 2 / 3;
@@ -694,9 +705,8 @@ header .navbar{
 
 /**** INICIO FOOTER****/
 footer{
-    background-color: #2C96A9;
-    /* background-image: linear-gradient(to top, #6aa85d, #4ab39c, #21a38e, #30a9bf, #2c96a9, #036F82); */
-    color: white;
+    background-color: var(--secondary);
+    color: var(--blanco);
     font-size: 1.4em;
 }
 .footer__container{
@@ -733,19 +743,19 @@ footer{
 }
 .footer__container__items__item__links li a{
     text-decoration: none;
-    color: white;
+    color: var(--blanco);
 }
 .footer__derechos-reservados{
-    background-color: black;
-    color: white;
+    background-color: var(--negro);
+    color: var(--blanco);
     font-size: 0.9em;
     text-align: center;
     height: 15px;
 }
 .icono-social{
-    background-color: #2C96A9;
-    /* color: #FC8C46; */
-    color: white;
+    background-color: var(--secondary);
+    /* color: var(--principal); */
+    color: var(--blanco);
     font-size: 1.5em;
 }
 /**** FIN FOOTER****/
@@ -755,7 +765,7 @@ footer{
     .content{
         max-width: 900px;
     }
-    header .navbar{
+    .header .header__contenedor-navbar .navbar{
         max-width: 900px;
     }
     .seccion-contacto{
@@ -769,11 +779,11 @@ footer{
     }
 }
 @media screen and (max-width:768px){
-    header .navbar{
+    .header .header__contenedor-navbar .navbar{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        min-height: 15vh;
+        min-height: 7vh;
         padding: .5rem 0;
         font-size: 1em;
     }
@@ -791,13 +801,10 @@ footer{
     .link-logo{
         flex-basis: 30%
     }
-    header .navbar{
-        min-height: 7vh;
-    }
-    .header__background-img{
+    .header .header__background-img{
         height: 50vh;
     }
-    .header__background-otters--img{
+    .header .header__background-otters--img{
         height: 30vh;
     }
     .seccion1__cuerpo__texto{
@@ -946,7 +953,7 @@ footer{
     .nav__ham:hover{
         transform: rotate(360deg);
     }
-    header .navbar{
+    .header .header__contenedor-navbar .navbar{
         /* background-color: rgba(0, 0, 0, .7); */
         flex-direction: column;
         align-items: flex-start;
@@ -977,7 +984,7 @@ footer{
     to{opacity: 1;}
 }
 .nav__enlaces-menu.activado{
-    background-color: black;
+    background-color: var(--negro);
     display: flex;
     animation: muestraMenu 400ms ease-in-out both;
 }

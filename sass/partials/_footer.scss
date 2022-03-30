@@ -1,0 +1,56 @@
+/**** INICIO FOOTER****/
+footer{
+    background-color: $secondary;
+    color: $blanco;
+    font-size: 1.4em;
+    .footer__container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto auto;
+        justify-items: center;
+        align-items: start;
+        gap: 1em;
+        flex-wrap: wrap;
+        .footer__logo{
+            grid-column: 1 / 5;
+            grid-row: 1;
+            .footer__logo__img{
+                padding: 10px;
+                width: 90%;
+            }
+        }
+        .footer__visitanos{
+            grid-column: 1 / 2;
+            grid-row: 2;
+            .icono-social{
+                background-color: $secondary;
+                /* color: $principal); */
+                color: $blanco;
+                font-size: 1.5em;
+            }
+        }
+        .footer__contacto{
+            grid-column: 2 / 3;
+            grid-row: 2;
+        }
+        .footer__interes{
+            grid-column: 3 / 4;
+            grid-row: 2;
+            .footer__container__items__item__links{
+                list-style-type: none;
+                li a{
+                    text-decoration: none;
+                    color: $blanco;
+                }
+            }
+        }
+    }
+    .footer__derechos-reservados{
+        background-color: $negro;
+        color: $blanco;
+        font-size: 0.9em;
+        text-align: center;
+        height: 15px;
+    }
+}
+/**** FIN FOOTER****/

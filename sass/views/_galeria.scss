@@ -1,0 +1,80 @@
+/*---------------------PAG Galeria-------------------------*/
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px;
+    overflow: hidden;
+    > a{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    img{
+        width: 100%;
+        vertical-align: top;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    a:hover img{
+        filter: blur(2px);
+        transform: rotate(10deg)
+        scale(1.3);
+    }
+}
+
+
+
+.light-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    img{
+        width: 75vw;
+        max-height: 75vh;
+    }
+    &:target{
+        transform: scale(1);
+    }
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: $principal;
+    color: $blanco;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2em;
+    /* font-weight: bold; */
+}
+.next{
+    display: block;
+    background: $principal;
+    color: $blanco;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+/*---------------------end PAG Galeria-------------------------*/

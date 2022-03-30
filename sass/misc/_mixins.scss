@@ -1,0 +1,21 @@
+/**HELPERS**/
+.content{
+    padding: 1.5rem;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* .body-index{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.body-pag{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+} */
+.linea{
+    /* background: var(--principal); */
+    background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
+    height: 5px;
+    width: 100%;
+    display: block;
+}

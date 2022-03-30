@@ -1,0 +1,867 @@
+/* MISC/VARIABLES */
+/***VARIABLES***/
+/* MISC/NORMALIZE */
+/**IMPORT**/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300;600;700&display=swap");
+/**NORMALIZE**/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/**GLOBALS**/
+html {
+  font-family: 'Montserrat', Sans-serif;
+  font-size: 62.5%; }
+
+/* MISC/MIXINS */
+/**HELPERS**/
+.content {
+  padding: 1.5rem;
+  max-width: 1170px;
+  margin: 0 auto; }
+
+/* .body-index{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.body-pag{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+} */
+.linea {
+  /* background: var(--principal); */
+  background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
+  height: 5px;
+  width: 100%;
+  display: block; }
+
+/* PARTIALS/HEADER */
+/*********INCIO HEADER*********/
+/*---background header---*/
+.header__background-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/des-puno.jpg);
+  background-repeat: no-repeat;
+  background-position: none center;
+  background-size: cover;
+  height: 99.3vh;
+  display: flex;
+  flex-direction: column; }
+
+.header__background-otters--img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/des-puno.jpg);
+  background-repeat: no-repeat;
+  background-position: none center;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  flex-direction: column; }
+
+.header__contenedor-navbar {
+  /*---background navbar---*/
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  border-bottom: 1px solid #9e9e9e;
+  z-index: 1000; }
+  .header__contenedor-navbar .navbar {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 0 2rem; }
+
+.nav_logo {
+  width: 85%;
+  min-width: 120px; }
+
+.link-logo {
+  flex-basis: 20%;
+  text-decoration: none;
+  padding: 0;
+  margin: 0; }
+
+.nav__enlaces-menu {
+  flex-basis: 50%;
+  display: flex;
+  padding: 0;
+  justify-content: space-between; }
+  .nav__enlaces-menu__item {
+    /* padding: 10px 40px; */
+    padding: 1rem 2rem;
+    list-style-type: none;
+    transition: 0.5s; }
+    .nav__enlaces-menu__item__link {
+      text-decoration: none;
+      color: #f3f3f3;
+      font-size: 1.5em;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      /*Espaciado de letras*/
+      padding: 1rem 0; }
+    .nav__enlaces-menu__item:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px; }
+
+.nav__ham {
+  display: none;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; }
+  .nav__ham span {
+    display: block;
+    background-color: #f3f3f3;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px; }
+
+/********* TITULO DE PAGINA**********/
+.content-tittle {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .content-tittle .header__titulo-index {
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+    color: #f3f3f3;
+    /* background-color: rgba(0, 0, 0, 0.65); */
+    /* padding: 5px ; */ }
+    .content-tittle .header__titulo-index .titulo-seccion {
+      /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+      /* margin-top: 10%; */
+      font-family: "Bebas Neue";
+      font-size: 8em;
+      /* text-align: center; */
+      letter-spacing: 5px;
+      animation-duration: 2s; }
+    .content-tittle .header__titulo-index .titulo__texto {
+      font-size: 6em;
+      animation-duration: 2.5s;
+      /* text-align: center; */ }
+  .content-tittle .header__titulo {
+    width: 100%;
+    height: auto;
+    color: #f3f3f3;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 5px; }
+    .content-tittle .header__titulo .titulo-seccion-otros {
+      /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+      /* margin-top: 10%; */
+      font-family: "Bebas Neue";
+      font-size: 4em;
+      text-align: center;
+      letter-spacing: 5px; }
+
+.header__contenedor-navbar.abajo {
+  background-color: #0f0f0f; }
+  .header__contenedor-navbar.abajo .nav_logo {
+    width: 65%; }
+  .header__contenedor-navbar.abajo .navbar {
+    min-height: 8.5vh; }
+
+/*********FIN HEADER*********/
+/* PARTIALS/FOOTER */
+/**** INICIO FOOTER****/
+footer {
+  background-color: #2C96A9;
+  color: #f3f3f3;
+  font-size: 1.4em; }
+  footer .footer__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: start;
+    gap: 1em;
+    flex-wrap: wrap; }
+    footer .footer__container .footer__logo {
+      grid-column: 1 / 5;
+      grid-row: 1; }
+      footer .footer__container .footer__logo .footer__logo__img {
+        padding: 10px;
+        width: 90%; }
+    footer .footer__container .footer__visitanos {
+      grid-column: 1 / 2;
+      grid-row: 2; }
+      footer .footer__container .footer__visitanos .icono-social {
+        background-color: #2C96A9;
+        /* color: $principal); */
+        color: #f3f3f3;
+        font-size: 1.5em; }
+    footer .footer__container .footer__contacto {
+      grid-column: 2 / 3;
+      grid-row: 2; }
+    footer .footer__container .footer__interes {
+      grid-column: 3 / 4;
+      grid-row: 2; }
+      footer .footer__container .footer__interes .footer__container__items__item__links {
+        list-style-type: none; }
+        footer .footer__container .footer__interes .footer__container__items__item__links li a {
+          text-decoration: none;
+          color: #f3f3f3; }
+  footer .footer__derechos-reservados {
+    background-color: #0f0f0f;
+    color: #f3f3f3;
+    font-size: 0.9em;
+    text-align: center;
+    height: 15px; }
+
+/**** FIN FOOTER****/
+/* VIEWS/INDEX*/
+/************INICIO MAIN************/
+.seccion1__sub-titulo {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 3.5em;
+  color: #2C96A9; }
+
+.seccion1__contenedor {
+  display: flex;
+  justify-content: space-between; }
+  .seccion1__contenedor .seccion1__cuerpo__texto {
+    text-align: justify;
+    word-spacing: 2px;
+    white-space: pre-line;
+    display: inline-block;
+    font-size: 1.6em;
+    width: 71%; }
+    .seccion1__contenedor .seccion1__cuerpo__texto .celeste {
+      font-weight: bold;
+      color: #2C96A9; }
+  .seccion1__contenedor .seccion1__cuerpo__imagen {
+    display: inline-block;
+    width: 20%;
+    align-items: center;
+    /* padding: 0 25px; */ }
+    .seccion1__contenedor .seccion1__cuerpo__imagen img {
+      border-radius: 350px;
+      width: 100%; }
+
+/*********FRASE VIAJA CON MAYHUA TRAVEL********/
+.frase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2C96A9;
+  padding: 1%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  word-spacing: 3px; }
+  .frase .icono {
+    display: inline-block;
+    width: 4%; }
+    .frase .icono .frase__icono {
+      width: 100%; }
+  .frase__texto {
+    color: #f3f3f3;
+    display: inline-block;
+    font-size: 2em;
+    text-align: center; }
+
+/***********SECCION DE LOS TOP TOURS********************/
+.toptours {
+  display: flex;
+  flex-direction: column; }
+  .toptours__titulo {
+    font-family: "Bebas Neue";
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 4em;
+    color: #fc8c46;
+    word-spacing: 5px; }
+  .toptours__texto {
+    text-align: center;
+    word-spacing: 2px;
+    font-size: 1.6em; }
+  .toptours .lista-tours {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 25px 45px;
+    /* overflow: hidden; */ }
+    .toptours .lista-tours .tour {
+      display: block;
+      background-color: #f7f7f7;
+      /* width: 100%; */
+      /* max-width: 350px; */
+      /* height: 100%; */
+      /* padding: 0 15px; */
+      /* margin: 0 5px;
+            vertical-align: top; */
+      position: relative;
+      overflow: hidden;
+      box-shadow: 3px 3px 5px 0.5px rgba(0, 0, 0, 0.5); }
+      .toptours .lista-tours .tour div {
+        overflow: hidden; }
+        .toptours .lista-tours .tour div:hover img {
+          /* filter: blur(1px); */
+          transform: scale(1.2); }
+      .toptours .lista-tours .tour__img {
+        width: 100%;
+        vertical-align: top;
+        height: 300px;
+        object-fit: cover; }
+      .toptours .lista-tours .tour__titulo {
+        font-family: "Bebas Neue";
+        color: #696c6d;
+        text-align: center;
+        font-size: 2.5em;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        font-weight: lighter; }
+        .toptours .lista-tours .tour__titulo:hover {
+          color: #2C96A9; }
+      .toptours .lista-tours .tour__intro {
+        padding: 0 20px 10px;
+        word-spacing: 2px;
+        font-size: 1.6em; }
+      .toptours .lista-tours .tour__boton {
+        display: block;
+        width: 100%;
+        height: 35px;
+        background-color: #fc8c46;
+        text-decoration: none;
+        font-weight: bold; }
+        .toptours .lista-tours .tour__boton__texto {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          color: #f3f3f3;
+          font-size: 1.6em;
+          padding-top: 7px; }
+        .toptours .lista-tours .tour__boton:hover {
+          background-color: #f3f3f3;
+          border: 1px solid #2C96A9; }
+        .toptours .lista-tours .tour__boton:hover .tour__boton__texto {
+          color: #0f0f0f; }
+  .toptours .boton-mas {
+    align-self: center;
+    width: 350px;
+    height: 35px;
+    background-color: #2C96A9;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px; }
+    .toptours .boton-mas__texto {
+      text-align: center;
+      color: #f3f3f3;
+      font-weight: bolder; }
+    .toptours .boton-mas:hover {
+      background-color: #036F82; }
+
+/********************OFERTA DEL MES***********************/
+.oferta__imagen {
+  height: 350px;
+  background-image: url(../images/ciudadela-machu-picchu.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: none center;
+  background-size: cover;
+  margin: 40px 0;
+  display: flex;
+  justify-content: end;
+  align-items: center; }
+  .oferta__imagen .contenedor-texto-oferta {
+    /* padding: 1.5rem; */
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 100%; }
+    .oferta__imagen .contenedor-texto-oferta .oferta-texto {
+      background-color: rgba(44, 150, 169, 0.75);
+      height: 400px;
+      width: 450px;
+      padding: 40px;
+      color: #f3f3f3;
+      border-radius: 2%; }
+      .oferta__imagen .contenedor-texto-oferta .oferta-texto__titulo {
+        font-size: 2.4em;
+        padding-bottom: 20px; }
+      .oferta__imagen .contenedor-texto-oferta .oferta-texto__intro {
+        font-size: 1.6em;
+        padding: 0 20px 20px; }
+      .oferta__imagen .contenedor-texto-oferta .oferta-texto__boton {
+        display: inline-block;
+        width: 200px;
+        height: 35px;
+        background-color: #fc8c46;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.8em; }
+        .oferta__imagen .contenedor-texto-oferta .oferta-texto__boton__texto {
+          padding-top: 5px;
+          color: #f3f3f3;
+          text-align: center; }
+        .oferta__imagen .contenedor-texto-oferta .oferta-texto__boton:hover {
+          background-color: #f77626; }
+
+/************************TIPS***************************/
+.tips {
+  display: flex;
+  flex-direction: column; }
+  .tips__texto {
+    padding-bottom: 40px; }
+  .tips .contenedor-tips {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .tips .contenedor-tips .tip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      /* border-radius: 50%; */
+      width: 300px;
+      height: 300px;
+      margin: 15px;
+      border-radius: 50%;
+      box-shadow: 11px 11px 22px #9d9d9d, -11px -11px 22px #ffffff; }
+      .tips .contenedor-tips .tip__intro {
+        font-size: 1.6em;
+        color: #f3f3f3;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.4); }
+
+/* VIEWS/DESTINOS*/
+/*---------------------PAG Destinos-------------------------*/
+.destino__boton {
+  display: block;
+  width: 100%;
+  height: 35px;
+  background-color: #eeeeee;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #cecece;
+  border-left: 0px;
+  border-right: 0px; }
+  .destino__boton__texto {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #0f0f0f;
+    padding-top: 7px;
+    font-size: 1.6em; }
+  .destino__boton:hover {
+    border: 1px solid #2C96A9; }
+
+/*---------------------end PAG Destinos-------------------------*/
+/* VIEWS/NOSOTROS*/
+/*---------------------PAG Nosotros-------------------------*/
+.nosotros {
+  display: grid;
+  grid-template-rows: repeat(2, auto); }
+  .nosotros .familia-mt {
+    grid-row: 1 / 2;
+    padding: 0 1.5em 3em 1.5em; }
+  .nosotros .mision-vision {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column; }
+    .nosotros .mision-vision__titulo {
+      font-size: 2.4em;
+      padding-bottom: 20px; }
+    .nosotros .mision-vision__intro {
+      font-size: 1.6em;
+      padding: 0 20px 20px; }
+    .nosotros .mision-vision .mision__imagen {
+      width: 100%;
+      /* height: 100%; */ }
+  .nosotros .mision {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0; }
+    .nosotros .mision__texto {
+      display: inline-block;
+      padding: 40px;
+      /* width: 650px; */
+      background-color: #2C96A9;
+      color: #f3f3f3;
+      text-align: justify;
+      flex-basis: 70%; }
+    .nosotros .mision__img {
+      display: inline-block;
+      width: 350px;
+      border: 0.2px solid lightgray;
+      flex-basis: 30%; }
+  .nosotros .vision {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0; }
+    .nosotros .vision__img {
+      display: inline-block;
+      /* width: 500px; */
+      border: 0.2px solid lightgray;
+      flex-basis: 30%; }
+    .nosotros .vision__texto {
+      display: inline-block;
+      padding: 40px;
+      /* width: 650px; */
+      background-color: #2C96A9;
+      color: #f3f3f3;
+      text-align: justify;
+      flex-basis: 70%; }
+
+/* VIEWS/GALERIA*/
+/*---------------------PAG Galeria-------------------------*/
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 95%;
+  margin: auto;
+  grid-gap: 10px;
+  padding: 40px;
+  overflow: hidden; }
+  .galeria > a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+  .galeria img {
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s; }
+  .galeria a:hover img {
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3); }
+
+.light-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0); }
+  .light-box img {
+    width: 75vw;
+    max-height: 75vh; }
+  .light-box:target {
+    transform: scale(1); }
+
+.close {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #fc8c46;
+  color: #f3f3f3;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 2em;
+  /* font-weight: bold; */ }
+
+.next {
+  display: block;
+  background: #fc8c46;
+  color: #f3f3f3;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center; }
+
+/*---------------------end PAG Galeria-------------------------*/
+/* VIEWS/CONTACTO*/
+/*---------------------PAG Contacto-------------------------*/
+.seccion-contacto {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto auto;
+  gap: 2.5rem; }
+  .seccion-contacto .formulario-contacto {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding: 40px;
+    border: 0.2px solid #d8d8d8;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1); }
+    .seccion-contacto .formulario-contacto__titulo {
+      padding: 15px 0;
+      font-size: 2.08em; }
+    .seccion-contacto .formulario-contacto .etiqueta {
+      font-size: 1.44em;
+      display: block; }
+      .seccion-contacto .formulario-contacto .etiqueta .campo-texto {
+        display: block; }
+        .seccion-contacto .formulario-contacto .etiqueta .campo-texto .campo {
+          width: 95%;
+          padding: 0.5rem 1rem;
+          outline: none;
+          border: 2px solid #d8d8d8;
+          border-radius: 5px;
+          font-family: 'Montserrat', Sans-serif;
+          font-size: 1.11em;
+          margin-bottom: 22px;
+          transition: 0.3s; }
+          .seccion-contacto .formulario-contacto .etiqueta .campo-texto .campo:hover {
+            background-color: rgba(189, 189, 189, 0.05); }
+          .seccion-contacto .formulario-contacto .etiqueta .campo-texto .campo:focus {
+            background-color: #f3f3f3;
+            border: 2px solid #2C96A9; }
+    .seccion-contacto .formulario-contacto .btn_enviar {
+      width: 100px;
+      padding: 0.5rem 1rem;
+      font-size: 1.76em;
+      background-color: #2C96A9;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      transition: 0.3s;
+      color: #f3f3f3; }
+      .seccion-contacto .formulario-contacto .btn_enviar:hover {
+        background-color: --efectoSecondary; }
+
+.contenido-contacto {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  border: 0.2px solid #d8d8d8;
+  padding: 40px; }
+  .contenido-contacto__titulo {
+    padding: 15px 0;
+    font-size: 2.08em; }
+    .contenido-contacto__titulo__texto {
+      word-spacing: 2px;
+      padding-bottom: 10px;
+      font-size: 1.44em; }
+
+.mapa {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  border: 0.2px solid #d8d8d8;
+  padding: 20px;
+  margin-bottom: 20px; }
+
+/*---------------------end PAG Contacto-------------------------*/
+/* VIEWS/PARTIALS*/
+/*-----------------RESPONSIVE---------------*/
+@media screen and (max-width: 1200px) {
+  .content {
+    max-width: 900px; }
+  .header .header__contenedor-navbar .navbar {
+    max-width: 900px; }
+  .seccion-contacto {
+    gap: 1rem; }
+  .formulario-contacto {
+    padding: 20px; }
+  .contenido-contacto {
+    padding: 20px; } }
+
+@media screen and (max-width: 768px) {
+  .header .header__contenedor-navbar .navbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 7vh;
+    padding: .5rem 0;
+    font-size: 1em; }
+  .nav_logo {
+    width: 180px;
+    min-width: 120px; }
+  .nav__enlaces-menu {
+    flex-wrap: wrap;
+    justify-content: center; }
+  .nav__enlaces-menu .nav__enlaces-menu__item {
+    padding: 0.5rem 0.6rem; }
+  .link-logo {
+    flex-basis: 30%; }
+  .header .header__background-img {
+    height: 50vh; }
+  .header .header__background-otters--img {
+    height: 30vh; }
+  .seccion1__contenedor .seccion1__cuerpo__texto {
+    word-spacing: 2px;
+    width: 90%; }
+  .seccion1__contenedor .seccion1__cuerpo__imagen {
+    width: 55%; }
+  .content-tittle .header__titulo-index .titulo-seccion {
+    /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: 5px; }
+  .content-tittle .header__titulo .titulo-seccion-otros {
+    font-size: 2.5em; }
+  .content-tittle .header__titulo-index .titulo__texto {
+    font-size: 2.5em;
+    text-align: center; }
+  .seccion1__contenedor {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; }
+  .frase .icono {
+    display: inline-block;
+    width: 6%;
+    /* height: 3%; */ }
+  .oferta__imagen .contenedor-texto-oferta {
+    flex-basis: auto; }
+  .oferta__imagen {
+    justify-content: center; }
+  .oferta__imagen .contenedor-texto-oferta .oferta-texto {
+    padding: 15px;
+    height: 400px;
+    width: 350px; }
+  footer .footer__container {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: auto auto auto auto;
+    /* justify-items: center;
+        align-items: start; */
+    gap: 1em;
+    flex-wrap: wrap;
+    text-align: center; }
+  footer .footer__container .footer__logo {
+    grid-column: 1 / 5;
+    grid-row: 1; }
+  footer .footer__container .footer__visitanos {
+    grid-column: 1 / 5;
+    grid-row: 2; }
+  footer .footer__container .footer__contacto {
+    grid-column: 1 / 5;
+    grid-row: 3; }
+  footer .footer__container .footer__interes {
+    grid-column: 1 / 5;
+    grid-row: 4; }
+  .nosotros .mision {
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 15px 0; }
+  .nosotros .mision__texto {
+    flex-basis: auto;
+    width: 90%;
+    padding: 20px; }
+  .nosotros .mision__img {
+    flex-basis: auto;
+    width: 90%; }
+  .nosotros .vision {
+    flex-flow: column wrap-reverse;
+    align-items: center;
+    padding: 15px 0; }
+  .nosotros .vision__texto {
+    flex-basis: auto;
+    width: 90%;
+    padding: 20px; }
+  .nosotros .vision__img {
+    flex-basis: auto;
+    width: 90%; }
+  .seccion-contacto {
+    grid-template-rows: auto auto auto;
+    gap: 1rem; }
+  .seccion-contacto .formulario-contacto {
+    grid-column: 1 / 3;
+    grid-row: 1; }
+  .contenido-contacto {
+    grid-column: 1 / 3;
+    grid-row: 2; }
+  .mapa {
+    grid-column: 1 / 3;
+    grid-row: 3; } }
+
+@media screen and (max-width: 450px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .close {
+    top: 20px;
+    right: 20px; }
+  .toptours .lista-tours {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .toptours .boton-mas {
+    width: 250px; }
+  .oferta__imagen .contenedor-texto-oferta .oferta-texto {
+    width: 90%; }
+  /* body{
+        overflow: hidden;
+    } */
+  .nav_logo {
+    padding-left: 25px; }
+  .nav__ham {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    transition: 0.2s 0.1s; }
+  .nav__ham:hover {
+    transform: rotate(360deg); }
+  .header .header__contenedor-navbar .navbar {
+    /* background-color: rgba(0, 0, 0, .7); */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    /* min-height: 100vh; */
+    justify-content: flex-start; }
+  .nav__enlaces-menu {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 92vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: none;
+    opacity: 0; }
+  .nav__enlaces-menu .nav__enlaces-menu__item {
+    width: 100%;
+    text-align: center;
+    padding: 20px; } }
+
+@keyframes muestraMenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.nav__enlaces-menu.activado {
+  background-color: #0f0f0f;
+  display: flex;
+  animation: muestraMenu 400ms ease-in-out both; }
+
+.header__contenedor-navbar.activado {
+  background-color: #0f0f0f;
+  animation: muestraMenu 400ms ease-in-out both; }
+
+.br-1.animado {
+  transform: rotate(-45deg) translate(-10px, 8px); }
+
+.br-2.animado {
+  opacity: 0; }
+
+.br-3.animado {
+  transform: rotate(45deg) translate(-10px, -8px); }

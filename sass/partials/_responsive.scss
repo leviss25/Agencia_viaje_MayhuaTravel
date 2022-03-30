@@ -1,0 +1,241 @@
+/*-----------------RESPONSIVE---------------*/
+@media screen and (max-width:1200px){
+    .content{
+        max-width: 900px;
+    }
+    .header .header__contenedor-navbar .navbar{
+        max-width: 900px;
+    }
+    .seccion-contacto{
+        gap: 1rem;
+    }
+    .formulario-contacto{
+        padding: 20px;
+    }
+    .contenido-contacto{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:768px){
+    .header .header__contenedor-navbar .navbar{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: 7vh;
+        padding: .5rem 0;
+        font-size: 1em;
+    }
+    .nav_logo{
+        width: 180px;
+        min-width: 120px;
+    }
+    .nav__enlaces-menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav__enlaces-menu .nav__enlaces-menu__item{
+        padding: 0.5rem 0.6rem;
+    }
+    .link-logo{
+        flex-basis: 30%
+    }
+    .header .header__background-img{
+        height: 50vh;
+    }
+    .header .header__background-otters--img{
+        height: 30vh;
+    }
+    .seccion1__contenedor .seccion1__cuerpo__texto{
+        word-spacing: 2px;
+        width: 90%;
+    }
+    .seccion1__contenedor .seccion1__cuerpo__imagen{
+        width: 55%;
+    }
+    .content-tittle .header__titulo-index .titulo-seccion{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+        font-size: 4em;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+    .content-tittle .header__titulo .titulo-seccion-otros{
+        font-size: 2.5em;
+    }
+    .content-tittle .header__titulo-index .titulo__texto{
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .seccion1__contenedor{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .frase .icono{
+        display:inline-block;
+        width: 6%;
+        /* height: 3%; */
+    }
+    .oferta__imagen .contenedor-texto-oferta{
+        flex-basis: auto;
+    }
+    .oferta__imagen{
+        justify-content: center;
+    }
+    .oferta__imagen .contenedor-texto-oferta .oferta-texto{
+        padding: 15px;
+        height: 400px;
+        width: 350px;
+    }
+    footer .footer__container{
+        display: grid;
+        /* grid-template-columns: 1fr; */
+        grid-template-rows: auto auto auto auto;
+        /* justify-items: center;
+        align-items: start; */
+        gap: 1em;
+        flex-wrap: wrap;
+        text-align: center;        
+    }
+    footer .footer__container .footer__logo{
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+    footer .footer__container .footer__visitanos{
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+    footer .footer__container .footer__contacto{
+        grid-column: 1 / 5;
+        grid-row: 3;
+    }
+    footer .footer__container .footer__interes{
+        grid-column: 1 / 5;
+        grid-row: 4;
+    }
+    .nosotros .mision{
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .nosotros .mision__texto{   
+        flex-basis: auto;
+        width: 90%;
+        padding: 20px;
+    }
+    .nosotros .mision__img{
+        flex-basis: auto;
+        width: 90%;
+    }
+    .nosotros .vision{
+        flex-flow: column wrap-reverse;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .nosotros .vision__texto{  
+        flex-basis: auto; 
+        width: 90%;
+        padding: 20px;
+    }
+    .nosotros .vision__img{
+        flex-basis: auto;
+        width: 90%;
+    }
+    .seccion-contacto{
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+    .seccion-contacto .formulario-contacto{
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .contenido-contacto{
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+    .mapa{
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+}
+@media screen and (max-width:450px){
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+    .toptours .lista-tours{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+    .toptours .boton-mas{
+        width: 250px;
+    }
+    .oferta__imagen .contenedor-texto-oferta .oferta-texto{
+        width: 90%;
+    }
+
+    /* body{
+        overflow: hidden;
+    } */
+    .nav_logo{
+        padding-left: 25px;
+    }
+    .nav__ham{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        transition: 0.2s 0.1s;
+    }
+    .nav__ham:hover{
+        transform: rotate(360deg);
+    }
+    .header .header__contenedor-navbar .navbar{
+        /* background-color: rgba(0, 0, 0, .7); */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+        /* min-height: 100vh; */
+        justify-content: flex-start;
+    }
+    .nav__enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 92vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        opacity: 0;
+    }
+    .nav__enlaces-menu .nav__enlaces-menu__item{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    
+}
+@keyframes muestraMenu{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.nav__enlaces-menu.activado{
+    background-color: $negro;
+    display: flex;
+    animation: muestraMenu 400ms ease-in-out both;
+}
+.header__contenedor-navbar.activado{
+    background-color: $negro;
+    animation: muestraMenu 400ms ease-in-out both;
+}
+.br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+.br-2.animado{
+    opacity: 0;
+}
+.br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+}

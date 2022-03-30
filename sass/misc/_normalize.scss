@@ -1,0 +1,17 @@
+/**IMPORT**/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300;600;700&display=swap');
+
+/**NORMALIZE**/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**GLOBALS**/
+html{
+    font-family: 'Montserrat', Sans-serif;
+    font-size: 62.5%;
+}
