@@ -32,11 +32,14 @@ html {
     grid-template-rows: auto 1fr auto;
 } */
 .linea {
-  /* background: var(--principal); */
+  /* background: $principal; */
   background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
   height: 5px;
   width: 100%;
   display: block; }
+
+.seccion-blanca {
+  background-color: #f9f9f9; }
 
 /* PARTIALS/HEADER */
 /*********INCIO HEADER*********/
@@ -653,6 +656,7 @@ footer {
 .contenido-contacto {
   grid-column: 2 / 3;
   grid-row: 1;
+  background-color: #fdfdfd;
   border: 0.2px solid #d8d8d8;
   padding: 40px; }
   .contenido-contacto__titulo {
@@ -666,6 +670,7 @@ footer {
 .mapa {
   grid-column: 1 / 3;
   grid-row: 2;
+  background-color: #fdfdfd;
   border: 0.2px solid #d8d8d8;
   padding: 20px;
   margin-bottom: 20px; }
