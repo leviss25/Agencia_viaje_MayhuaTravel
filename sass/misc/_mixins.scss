@@ -1,24 +1,35 @@
 /**HELPERS**/
+@mixin anchoalto($ancho,$alto) {
+    width: $ancho;
+    height: $alto;    
+}
 .content{
     padding: 1.5rem;
     max-width: 1170px;
     margin: 0 auto;
 }
-/* .body-index{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-.body-pag{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-} */
 .linea{
     /* background: $principal; */
     background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
-    height: 5px;
-    width: 100%;
+    @include anchoalto(100%, 5px);
+    // height: 5px;
+    // width: 100%;
     display: block;
 }
 .seccion-blanca{
     background-color: #f9f9f9;
+}
+/*creamos un map*/
+$spacings:(
+    xlarge: 4rem,
+    large:  3rem,
+    medium: 2rem,
+    small:  1.5rem,
+    xsmall: 1rem
+);
+
+@each $var, $val in $spacings {
+    .sp-#{$var}{
+        padding: #{$val};
+    }
 }

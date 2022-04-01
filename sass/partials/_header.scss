@@ -1,25 +1,22 @@
 /*********INCIO HEADER*********/
 /*---background header---*/
+.background-paginas{ /* creamos una clase base*/
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url(../images/des-puno.jpg);
+        background-repeat: no-repeat;
+        background-position: none center;
+        background-size:cover;
+        display: flex;
+        flex-direction: column;
+}
 .header{
     &__background-img{
-        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-        url(../images/des-puno.jpg);
-        background-repeat: no-repeat;
-        background-position: none center;
-        background-size:cover;
+        @extend .background-paginas; /*modificamos la clase base background-paginas */
         height: 99.3vh;
-        display: flex;
-        flex-direction: column;
     }
     &__background-otters--img{
-        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-        url(../images/des-puno.jpg);
-        background-repeat: no-repeat;
-        background-position: none center;
-        background-size:cover;
+        @extend .background-paginas; /*modificamos la clase base background-paginas */
         height: 50vh;
-        display: flex;
-        flex-direction: column;
     }
     &__contenedor-navbar{ /*---background navbar---*/
         width: 100%;

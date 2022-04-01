@@ -7,7 +7,7 @@
         max-width: 900px;
     }
     .seccion-contacto{
-        gap: 1rem;
+        gap: map-get($spacings, xsmall);
     }
     .formulario-contacto{
         padding: 20px;
@@ -92,7 +92,7 @@
         grid-template-rows: auto auto auto auto;
         /* justify-items: center;
         align-items: start; */
-        gap: 1em;
+        gap: map-get($spacings, xsmall);
         flex-wrap: wrap;
         text-align: center;        
     }
@@ -142,7 +142,7 @@
     }
     .seccion-contacto{
         grid-template-rows: auto auto auto;
-        gap: 1rem;
+        gap: map-get($spacings, xsmall);
     }
     .seccion-contacto .formulario-contacto{
         grid-column: 1 / 3;

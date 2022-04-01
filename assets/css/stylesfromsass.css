@@ -23,44 +23,51 @@ html {
   max-width: 1170px;
   margin: 0 auto; }
 
-/* .body-index{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-.body-pag{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-} */
 .linea {
   /* background: $principal; */
   background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
-  height: 5px;
   width: 100%;
+  height: 5px;
   display: block; }
 
 .seccion-blanca {
   background-color: #f9f9f9; }
 
+/*creamos un map*/
+.sp-xlarge {
+  padding: 4rem; }
+
+.sp-large {
+  padding: 3rem; }
+
+.sp-medium {
+  padding: 2rem; }
+
+.sp-small {
+  padding: 1.5rem; }
+
+.sp-xsmall {
+  padding: 1rem; }
+
 /* PARTIALS/HEADER */
 /*********INCIO HEADER*********/
 /*---background header---*/
-.header__background-img {
+.background-paginas, .header__background-img, .header__background-otters--img {
+  /* creamos una clase base*/
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/des-puno.jpg);
   background-repeat: no-repeat;
   background-position: none center;
   background-size: cover;
-  height: 99.3vh;
   display: flex;
   flex-direction: column; }
 
+.header__background-img {
+  /*modificamos la clase base background-paginas */
+  height: 99.3vh; }
+
 .header__background-otters--img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/des-puno.jpg);
-  background-repeat: no-repeat;
-  background-position: none center;
-  background-size: cover;
-  height: 50vh;
-  display: flex;
-  flex-direction: column; }
+  /*modificamos la clase base background-paginas */
+  height: 50vh; }
 
 .header__contenedor-navbar {
   /*---background navbar---*/
@@ -186,7 +193,7 @@ footer {
     grid-template-rows: auto auto;
     justify-items: center;
     align-items: start;
-    gap: 1em;
+    gap: 1rem;
     flex-wrap: wrap; }
     footer .footer__container .footer__logo {
       grid-column: 1 / 5;
@@ -750,7 +757,7 @@ footer {
     grid-template-rows: auto auto auto auto;
     /* justify-items: center;
         align-items: start; */
-    gap: 1em;
+    gap: 1rem;
     flex-wrap: wrap;
     text-align: center; }
   footer .footer__container .footer__logo {
