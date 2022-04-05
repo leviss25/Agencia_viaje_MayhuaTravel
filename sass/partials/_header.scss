@@ -4,7 +4,7 @@
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
         url(../images/des-puno.jpg);
         background-repeat: no-repeat;
-        background-position: none center;
+        background-position: center;
         background-size:cover;
         display: flex;
         flex-direction: column;
@@ -59,6 +59,7 @@
         padding: 1rem 2rem;
         list-style-type: none;
         transition: 0.5s;
+        position: relative;
         &__link{
             text-decoration: none;
             color: $blanco;
@@ -70,6 +71,36 @@
         &:hover{
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 20px;
+        }
+        &:hover .sub-menu{
+            display: block;
+        }
+        .sub-menu{
+            display: none;
+            position: absolute;
+            top: 3.9rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 150%;
+            // left: 1rem;
+            &__item{
+                // display: block;
+                padding: 1rem 2rem;
+                list-style-type: none;
+                transition: 0.5s;
+                border-bottom: 0.2px solid rgb(158, 158, 158);
+                &__link{
+                    text-decoration: none;
+                    color: $blanco;
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    letter-spacing: 0.05em; /*Espaciado de letras*/
+                    padding: 1rem 0;
+                }
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 20px;
+                }
+            }
         }
     }
 }
