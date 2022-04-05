@@ -3,7 +3,6 @@ const ham = document.querySelector('.nav__ham');
 const enlaces = document.querySelector('.nav__enlaces-menu');
 const barras = document.querySelectorAll('.nav__ham span');
 const navbarcont = document.querySelector('.header__contenedor-navbar');
-const submenu = document.querySelector('.nav__enlaces-menu__item');
 ham.addEventListener('click', () => {
     enlaces.classList.toggle('activado');
     barras.forEach(child => {child.classList.toggle('animado')});
@@ -13,7 +12,4 @@ ham.addEventListener('click', () => {
 window.addEventListener("scroll", function(){
     var header = document.querySelector(".header__contenedor-navbar");
     header.classList.toggle("abajo",window.scrollY>0);
-});
-submenu.addEventListener('click', () => {
-    submenu.children('.sub-menu').toggle();
 });
