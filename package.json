@@ -1,7 +1,7 @@
 {
   "name": "mayhuatravelcusco",
   "version": "1.0.0",
-  "description": "",
+  "description": "Paquete js que usó para reprocesar el codigos .scss a .css a través del script watch-sass el cual instancia al nodemon",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
